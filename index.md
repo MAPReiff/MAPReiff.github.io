@@ -1,37 +1,20 @@
-## Welcome to GitHub Pages
+## Hello!
 
-You can use the [editor on GitHub](https://github.com/MAPReiff/MAPReiff.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
+Hello, my name is Mitchell! I am a Computer Engineering student studying at Stevens Institute of Technology in Hoboken, NJ. I enjoy learning about computer software and hardware, and much of my work can be found on my [GitHub](https://github.com/MAPReiff/).
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Resume
+### Education
 
-### Markdown
+**[Stevens Institute of Technology](https://stevens.edu)** - **Bachelor’s in Computer Engineering** - Hoboken, NJ (Aug 2019 - Present)
+Currently enrolled for a Bachelor’s in Computer Engineering and expected to graduate in May 2023
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
+**[The Beacon School](http://beaconschool.org/)** - New York, NY (Sept 2015- June 2019)
+Greaduated June 2019
 
-# Header 1
-## Header 2
-### Header 3
+### Experience
 
-- Bulleted
-- List
+****
+**[Conair LLC](conair.com)** - **Digital Support & Ecommerce Intern** - Stamford, CT (July 2021 - Present)
+Assisting the company in the creation of their new eCommerce-centric website. Responsibilities include asset management, data collection, as well as communication between different departments in order to ensure the gather information needed for the project.
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/MAPReiff/MAPReiff.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
