@@ -14,7 +14,6 @@ Graduated June 2019
 
 ### Experience
 
-
 **[Conair LLC](conair.com)** - **Digital Support & Ecommerce Intern** - Stamford, CT (July 2021 - Present)  
 Assisting the company in the creation of their new eCommerce-centric website. Responsibilities include asset management, data collection, as well as communication between different departments in order to ensure the gather information needed for the project.
 
@@ -29,3 +28,28 @@ Appointed to assist a teacher with Chemistry and Physics classes. Responsibiliti
 
 **[Manhattan East](https://www.manhattaneastschool.nyc/)** - **Data/Spreadsheet Entry** - (Sept 2014 - June 2015)  
 Assisted a blind teacher with grading homework, classwork, and tests. Input data into excel spreadsheets to simplify the grading process.
+
+### Activities
+
+**M8 Bot** - (Jan 2017 - June 2019)  
+Developed and programmed M8 Bot using Node JS, a chatbot made for the Discord chat platform, that was utilized by over 3,000 communities. Its main purpose is to automatically announce to Discord communities when users of Twitch or Mixer—two popular live-streaming platforms—start a live stream. In June 2019, I handed over development of the project so I could start to focus on college. All of its source code can be found on my public [Github repo](https://github.com/MAPReiff/M8-Bot).
+
+**3D Printing** - (July 2017 - Present)  
+Build and maintain 3D Printers, design files for real-world applications.
+
+**Server Administration** - (June 2015 - Present)  
+Run and maintain locally hosted servers in order to run applications such as game servers, local web apps, as well as network-attached storage. These servers typically run Linux.
+
+**Computer Configuring/Building Computers** - (Nov 2014 - Present)  
+Build computers from parts, and am knowledgeable about which parts work best together for optimal price and efficiency. Maintain computers on both hardware and software levels to keep them running efficiently.
+
+**Programming** - (June 2012 - Present)  
+Develop simple programs and contribute to codebases.
+
+### Skills & Abilities
+
+Understanding of the Linux family of operating systems & terminal  
+Programming (C++, Java, JavaScript, HTML)  
+Technical support & hardware optimization  
+Data entry  
+Adobe Photoshop & Adobe Premiere Pro
