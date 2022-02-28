@@ -1,0 +1,95 @@
+@font-face {
+  font-family: 'Hack'; /*a name to be used later*/
+  src: url('./fonts/Hack-Regular.ttf'); /*URL to font*/
+}
+
+body {
+  font-family: Hack;
+  font-size: 14px;
+  background-color: #1b0d25;
+  color: #d43bfd;
+  max-width: 700px !important;
+  margin: auto;
+  padding: 15px;
+  line-height: 19px;
+}
+
+a {
+  color: #d43bfd;
+}
+
+hr {
+  color: #d43bfd;
+}
+
+h1 {
+  font-family: Hack;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 26.4px;
+}
+
+h2 {
+  font-family: Hack;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 15.4px;
+}
+
+h3 {
+  font-family: Hack;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 15.4px;
+}
+
+h4 {
+  font-family: Hack;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 15.4px;
+}
+
+blockquote {
+  font-family: Hack;
+  font-weight: 400;
+  border-left: 3px solid #d43bfd;
+  padding-left: 0.7em;
+}
+
+pre {
+  font-family: Hack;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 1em;
+  max-width: inherit !important;
+  white-space: pre-wrap !important;
+  overflow-wrap: break-word !important;
+}
+
+code {
+  max-width: inherit !important;
+  white-space: pre-wrap !important;
+  overflow-wrap: break-word !important;
+}
+
+pre, :not(pre) > code {
+  background: rgba(0, 0, 0, 0.10);
+}
+
+:not(pre) > code {
+  padding: 2px 4px;
+}
+
+#site-header {
+  text-align: center;
+  align-content: center;
+}
+
+.page-link {
+  line-height: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 30;
+  text-decoration: none;
+}
