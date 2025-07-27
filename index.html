@@ -1,598 +1,708 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Mitchell Reiff</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Mitchell's Personal Website" />
-  <meta name="keywords"
-    content="Mitchell, Reiff, Mitchell Reiff, developer, nodejs, javascript, mreiff, MAPReiff, MReiff, mapreiff, web developer, software developer" />
-  <meta name="author" content="Mitchell Reiff" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mitchell Reiff - Computer Engineer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .gradient-text {
+      background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
 
-  <!-- 
-	//////////////////////////////////////////////////////
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
 
-	FREE HTML5 TEMPLATE 
-	DESIGNED & DEVELOPED by FreeHTML5.co
-		
-	Website: 		http://freehtml5.co/
-	Email: 			info@freehtml5.co
-	Twitter: 		http://twitter.com/fh5co
-	Facebook: 		https://www.facebook.com/fh5co
+    .timeline-item:not(:last-child):after {
+      content: '';
+      position: absolute;
+      left: 1.25rem;
+      top: 2.5rem;
+      height: calc(100% - 2.5rem);
+      width: 2px;
+      background-color: #e5e7eb;
+    }
 
-	//////////////////////////////////////////////////////
-	 -->
+    .skill-pill:hover {
+      transform: scale(1.05);
+    }
 
-  <!-- Facebook and Twitter integration -->
-  <meta property="og:title" content="" />
-  <meta property="og:image" content="" />
-  <meta property="og:url" content="" />
-  <meta property="og:site_name" content="" />
-  <meta property="og:description" content="" />
-  <meta name="twitter:title" content="" />
-  <meta name="twitter:image" content="" />
-  <meta name="twitter:url" content="" />
-  <meta name="twitter:card" content="" />
-
-  <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-
-
-  <!-- Animate.css -->
-  <link rel="stylesheet" href="css/animate.css">
-  <!-- Icomoon Icon Fonts-->
-  <link rel="stylesheet" href="css/icomoon.css">
-  <!-- Bootstrap  -->
-  <link rel="stylesheet" href="css/bootstrap.css">
-
-  <!-- Theme style  -->
-  <link rel="stylesheet" href="css/style.css">
-
-  <!-- Modernizr JS -->
-  <script src="js/modernizr-2.6.2.min.js"></script>
-  <!-- FOR IE9 below -->
-  <!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
-
-  <script type="module" src="https://sitring.eric.si/webring.js?id=mreiff" id="webringjs"></script>
-
+    #menu-toggle:checked+#menu {
+      display: block;
+    }
+  </style>
 </head>
 
-<body>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex items-center">
+          <a href="#" class="text-xl font-bold gradient-text">Mitchell Reiff</a>
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#about" class="text-gray-700 hover:text-indigo-600 transition">About</a>
+          <a href="#experience" class="text-gray-700 hover:text-indigo-600 transition">Experience</a>
+          <a href="#education" class="text-gray-700 hover:text-indigo-600 transition">Education</a>
+          <a href="#skills" class="text-gray-700 hover:text-indigo-600 transition">Skills</a>
+          <a href="#projects" class="text-gray-700 hover:text-indigo-600 transition">Projects</a>
+        </div>
+        <div class="md:hidden flex items-center">
+          <button id="menu-btn" class="text-gray-700 focus:outline-none">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="menu" class="hidden md:hidden bg-white border-t border-gray-200">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <a href="#about"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">About</a>
+        <a href="#experience"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Experience</a>
+        <a href="#education"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Education</a>
+        <a href="#skills"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Skills</a>
+        <a href="#projects"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Projects</a>
+      </div>
+    </div>
+  </nav>
 
-  <div class="fh5co-loader"></div>
-
-  <div id="page">
-    <header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner"
-      style="background-image:url(images/cover_bg.jpg);" data-stellar-background-ratio="0.5">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 col-md-offset-2 text-center">
-            <div class="display-t js-fullheight">
-              <div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
-                <div class="profile-thumb" style="background: url(images/me.jpg);"></div>
-                <h1><span>Mitchell Reiff</span></h1>
-                <h3><span>Developer | Engineer</span></h3>
-                <p>
-                <ul class="fh5co-social-icons">
-                  <li><a href="https://github.com/MAPReiff/"><i class="icon-github2"></i></a></li>
-                  <li><a href="https://www.linkedin.com/in/mitchell-reiff/"><i class="icon-linkedin2"></i></a></li>
-                  <li><a href="mailto:me@mreiff.dev"><i class="icon-email"></i></a></li>
-                </ul>
-                </p>
-              </div>
+  <!-- Hero Section -->
+  <section class="py-20 bg-gradient-to-r from-indigo-50 to-purple-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-10 md:mb-0">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">Hi, I'm <span class="gradient-text">Mitchell Reiff</span></h1>
+          <h2 class="text-2xl md:text-3xl text-gray-600 mb-6">Computer Engineer & Web Developer</h2>
+          <p class="text-lg text-gray-700 mb-8">I build digital solutions and ensure quality experiences for web
+            applications. Currently working as a Junior Technical Development & Quality Analyst at Build-A-Bear
+            Workshop.</p>
+          <div class="flex space-x-4">
+            <a href="#contact"
+              class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-medium transition">Contact
+              Me</a>
+            <a href="#projects"
+              class="border border-indigo-600 text-indigo-600 hover:bg-indigo-50 px-6 py-3 rounded-lg font-medium transition">View
+              Projects</a>
+          </div>
+        </div>
+        <div class="md:w-1/2 flex justify-center">
+          <div
+            class="relative w-64 h-64 md:w-80 md:h-80 bg-white rounded-full shadow-xl overflow-hidden border-4 border-white">
+            <!-- Placeholder for profile image -->
+            <div class="w-full h-full bg-gradient-to-r from-indigo-200 to-purple-200 flex items-center justify-center">
+              <!-- <span class="text-6xl font-bold text-indigo-600">MR</span> -->
+               <img src="/images/me.jpg" alt="A photo of Mitchell Reiff" />
             </div>
           </div>
         </div>
       </div>
-    </header>
-
-    <!-- About me -->
-    <div id="fh5co-about" class="animate-box">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-            <h2>About Me</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <ul class="info">
-              <li><span class="first-block">Full Name:</span><span class="second-block">Mitchell Reiff</span></li>
-              <li><span class="first-block">Phone:</span><span class="second-block">914 417 0000</span></li>
-              <li><span class="first-block">Email:</span><span class="second-block">me@mreiff.dev</span></li>
-              <li><span class="first-block">Website:</span><span class="second-block">www.mreiff.dev</span></li>
-              <li><span class="first-block">Location:</span><span class="second-block">Jersey City, NJ</span>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-8">
-            <h2>Hello There!</h2>
-            <p>Hello, welcome to my website! My name is Mitchell and I am a Computer Engineer from Jersey City, NJ.</p>
-            <p>I currently work as a Junior Technical Development &amp; Quality Analyst at Build-A-Bear Workshop,
-              working on e-commerce related projects and QA.</p>
-            <p>
-            <ul class="fh5co-social-icons">
-              <li><a href="https://github.com/MAPReiff/"><i class="icon-github2"></i></a></li>
-              <li><a href="https://www.linkedin.com/in/mitchell-reiff/"><i class="icon-linkedin2"></i></a></li>
-              <li><a href="mailto:me@mreiff.dev"><i class="icon-email"></i></a></li>
-            </ul>
-            </p>
-          </div>
-        </div>
-      </div>
     </div>
+  </section>
 
-    <!-- Resume -->
-    <div id="fh5co-resume" class="fh5co-bg-color">
-      <div class="container">
-        <div class="row animate-box">
-          <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-            <h2>Resume</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 col-md-offset-0">
-            <ul class="timeline">
-              <li class="timeline-heading text-center animate-box">
-                <div>
-                  <h3>Work Experience</h3>
-                </div>
+  <!-- About Section -->
+  <section id="about" class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold mb-12 text-center gradient-text">About Me</h2>
+      <div class="flex flex-col md:flex-row">
+        <div class="md:w-1/3 mb-8 md:mb-0">
+          <div class="bg-gray-50 p-6 rounded-xl shadow-sm">
+            <h3 class="text-xl font-semibold mb-4 text-gray-800">Personal Info</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <i class="fas fa-user mt-1 mr-3 text-indigo-600"></i>
+                <span>Mitchell Reiff</span>
               </li>
-              <li class="timeline-inverted animate-box">
-                <div class="timeline-badge"><i class="icon-suitcase"></i></div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h3 class="timeline-title">Junior Technical Development &amp; Quality Analyst</h3>
-                    <span class="company">Build-A-Bear Workshop - 2023 - Present</span>
-                  </div>
-                  <div class="timeline-body">
-                    <ul>
-                      <p>Work on the IT department's web team on the maintenance and development of two websites using
-                        Salesforce Commerce Cloud SFRA serving as the primary Quality Assurance Engineer for web
-                        projects.</p>
-
-                      <p>Perform regular smoke testing and regression testing across both websites to ensure feature
-                        requests are implemented properly and critical functionality is maintained.</p>
-
-                      <p>Manage and complete programming tasks using Jira for project tracking and task management,
-                        ensuring timely and accurate execution and delivery of feature requests, updates, and bug fixes.
-                      </p>
-
-                      <p>Diagnose and suggest solutions to critical site issues to ensure fixes are implemented promptly
-                        to minimize the number of lost orders.</p>
-
-                      <p>Assist the customer service team regarding invalid and failed web orders in Deck Commerce to
-                        ensure customer orders are all fulfilled.</p>
-
-                      <p>Employ tools such as Contentsquare and Siteimprove to identify and report errors that may lead
-                        to a loss of customer conversion and revenue.</p>
-                    </ul>
-                  </div>
-                </div>
+              <li class="flex items-start">
+                <i class="fas fa-phone mt-1 mr-3 text-indigo-600"></i>
+                <span>+1 914 417 0000</span>
               </li>
-              <li class="animate-box timeline-unverted">
-                <div class="timeline-badge"><i class="icon-suitcase"></i></div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h3 class="timeline-title">E-Commerce IT Technician</h3>
-                    <span class="company">Conair LLC - 2022 - 2023</span>
-                  </div>
-                  <div class="timeline-body">
-                    <ul>
-                      <p>Create email marketing blasts using MJML, Email on Acid, and Acoustic based on Figma designs
-                        for
-                        customer mailing lists of over 400,000 people.</p>
-
-                      <p>Assist IT department with projects including setup, migration, and deployment of user laptops
-                        using Microsoft Deployment Toolkit, Active Directory, and BitLocker through Intune. Develop
-                        scripts to automate IT tasks.</p>
-
-                      <p>Perform all responsibilities from prior Digital Support &amp; E-Commerce Associate role.</p>
-                    </ul>
-                  </div>
-                </div>
+              <li class="flex items-start">
+                <i class="fas fa-envelope mt-1 mr-3 text-indigo-600"></i>
+                <span>me@mreiff.dev</span>
               </li>
-              <li class="timeline-inverted animate-box">
-                <div class="timeline-badge"><i class="icon-suitcase"></i></div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h3 class="timeline-title">Digital Support &amp; E-Commerce Associate</h3>
-                    <span class="company">Conair LLC - 2021 - 2022</span>
-                  </div>
-                  <div class="timeline-body">
-                    <ul>
-                      <p>Worked in IT department on maintenance and creation of storefront websites using Salesforce
-                        Commerce Cloud and communicated with internal and third-party groups for bug fixes and feature
-                        requests.</p>
-
-                      <p>Created scripts to assist with data collection, manipulation, analysis, and importing for
-                        product
-                        details, price books, and customer data.</p>
-
-                      <p>Served as Technical PM of Customer Service and handled internal support tickets for product
-                        updates, asset updates, order/customer information, and troubleshooting on sites. Utilized Kount
-                        and Stripe for purchasing-related issues.</p>
-
-                      <p>Attended trade shows as part of IT team responsible for networking and point of sale system
-                        operation and providing support for our custom sales application across large sections of the
-                        show
-                        floor.</p>
-                    </ul>
-                  </div>
-                </div>
+              <li class="flex items-start">
+                <i class="fas fa-globe mt-1 mr-3 text-indigo-600"></i>
+                <span>www.mreiff.dev</span>
               </li>
-
-
-              <br>
-              <li class="timeline-heading text-center animate-box">
-                <div>
-                  <h3>Education</h3>
-                </div>
-              </li>
-              <li class="animate-box timeline-unverted">
-                <div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h3 class="timeline-title">Bachelors Degree</h3>
-                    <span class="company">Stevens Institute of Technology - 2019 - 2023</span>
-                  </div>
-                  <div class="timeline-body">
-                    <p>Bachelor of Engineering in Computer Engineering</p>
-                    <p>Vice President of the Stevens Linux Users Group</p>
-                    <p>Dean's List</p>
-                  </div>
-                </div>
-              </li>
-              <li class="timeline-inverted animate-box">
-                <div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h3 class="timeline-title">High School Diploma</h3>
-                    <span class="company">The Beacon School - 2015 - 2019</span>
-                  </div>
-                  <div class="timeline-body">
-                    <p>I attended The Beacon School and I graduated in 2019 with a 3.9/4 GPA.</p>
-                    <p>I was a teacher's assistant during 10th and 12th grade.</p>
-                  </div>
-                </div>
+              <li class="flex items-start">
+                <i class="fas fa-map-marker-alt mt-1 mr-3 text-indigo-600"></i>
+                <span>Bayonne, NJ</span>
               </li>
             </ul>
           </div>
         </div>
-      </div>
-    </div>
-
-    <!-- Skills -->
-    <div id="fh5co-skills" class="animate-box">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-            <h2>Skills</h2>
-          </div>
-        </div>
-        <div class="row row-pb-md">
-          <div class="col-md-3 col-sm-6 col-xs-12 text-center">
-            <p class="devicon-javascript-plain" style="font-size:150px"><br>
-            <p>JavaScript</p>
-            </p>
-          </div>
-          <div class="col-md-3 col-sm-6 col-xs-12 text-center">
-            <p class="devicon-nodejs-plain" style="font-size:150px"><br>
-            <p>Node.js</p>
-            </p>
-          </div>
-          <div class="col-md-3 col-sm-6 col-xs-12 text-center">
-            <p class="devicon-cplusplus-plain" style="font-size:150px"><br>
-            <p>C++</p>
-            </p>
-          </div>
-          <div class="col-md-3 col-sm-6 col-xs-12 text-center">
-            <p class="devicon-python-plain" style="font-size:150px"><br>
-            <p>Python</p>
-            </p>
-          </div>
-          <div class="col-md-3 col-sm-6 col-xs-12 text-center">
-            <p class="devicon-java-plain" style="font-size:150px"><br>
-            <p>Java</p>
-            </p>
-          </div>
-          <div class="col-md-3 col-sm-6 col-xs-12 text-center">
-            <p class="devicon-bash-plain" style="font-size:150px"><br>
-            <p>Bash</p>
-            </p>
-          </div>
-          <div class="col-md-3 col-sm-6 col-xs-12 text-center">
-            <p class="devicon-html5-plain" style="font-size:150px"><br>
-            <p>HTML</p>
-            </p>
-          </div>
-          <div class="col-md-3 col-sm-6 col-xs-12 text-center">
-            <p class="devicon-markdown-plain" style="font-size:150px"><br>
-            <p>Markdown</p>
-            </p>
-          </div>
-          <div class="col-md-3 col-sm-6 col-xs-12 text-center">
-            <p class="devicon-git-plain" style="font-size:150px"><br>
-            <p>Git</p>
-            </p>
-          </div>
-          <div class="col-md-3 col-sm-6 col-xs-12 text-center">
-            <p class="devicon-linux-plain" style="font-size:150px"><br>
-            <p>Linux</p>
-            </p>
-          </div>
-          <div class="col-md-3 col-sm-6 col-xs-12 text-center">
-            <p class="devicon-docker-plain" style="font-size:150px"><br>
-            <p>Docker</p>
-            </p>
-          </div>
-
-
-        </div>
-
-      </div>
-    </div>
-
-    <!-- Projects -->
-    <div id="fh5co-projects">
-      <div class="container">
-        <div class="row animate-box">
-          <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-            <h2>Projects</h2>
-            <!-- <p>Description</p> -->
-          </div>
-        </div>
-
-        <div class="row">
-
-          <!-- CS546 Tikit -->
-          <div class="col-md-4">
-            <div class="fh5co-projects animate-box">
-              <a href="https://github.com/MAPReiff/Tikit" class="blog-bg"
-                style="background-image: url(images/tikit.png);"></a>
-              <div class="blog-text">
-                <h3><a href="https://github.com/MAPReiff/Tikit">Tikit</a></h3>
-                <span class="posted_on">Mar 2023 - May 2023</span>
-                <p>An IT support ticketing web app created with JavaScript, Node.js, MongoDB, Express.js,
-                  Handlebars, and Bootstrap.</p>
-                <p>Core features include user accounts, login page, landing pages, tickets, and comments.</p>
-                <ul class="stuff">
-                  <li><i class="devicon-javascript-plain"></i> <i class="devicon-nodejs-plain"></i> <i
-                      class="devicon-mongodb-plain"> </i><i class="devicon-express-original"></i> <i
-                      class="devicon-handlebars-plain"></i></li>
-                  <li><a href="https://github.com/MAPReiff/Tikit">Learn More<i class="icon-arrow-right22"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- Senior D Psyche -->
-          <div class="col-md-4">
-            <div class="fh5co-projects animate-box">
-              <!-- <a href="#" class="blog-bg" style="background-image: url(images/portfolio-1.jpg);"></a> -->
-              <div class="blog-text">
-                <h3><a href="https://sites.google.com/view/psyche24/home">Psyche</a></h3>
-                <span class="posted_on">Sep 2022 - May 2023</span>
-                <p>Developed a hardware and software solution to tackle the issue of inadequate and imprecise
-                  identification of stress.</p>
-                <p>Employed the OpenBCI Ultracortex and relevant libraries to visually deliver stress
-                  analysis in real-time on a scale of 1 through 10 using brain activity.</p>
-                <!-- <p>Worked together as a team to record project progression and demonstrate the finished product and
-                  business pitch to a group of evaluators.</p> -->
-                <p>Winner of the 2023 David and GG Farber Societal Impact Award, established to create awareness of the
-                  impact innovation can have on society.</p>
-                <!-- <p>Senior Design Project.</p> -->
-                <ul class="stuff">
-                  <li><i class="devicon-processing-plain"></i> <i class="devicon-java-plain"></i></li>
-                  <li><a href="https://sites.google.com/view/psyche24/home">Learn More<i
-                        class="icon-arrow-right22"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- CPE462 Pedestrian Traffic -->
-          <div class="col-md-4">
-            <div class="fh5co-projects animate-box">
-              <a href="https://github.com/MAPReiff/CPE462-PedestrianSystem-2022S" class="blog-bg"
-                style="background-image: url(images/opencv_demo1.png);"></a>
-              <div class="blog-text">
-                <h3><a href="https://github.com/MAPReiff/CPE462-PedestrianSystem-2022S">Pedestrian System</a>
-                </h3>
-                <span class="posted_on">Feb 2022 - May 2022</span>
-                <p>Developed a program that can detect the presence of people in a crosswalk to determine if it is safe
-                  to change traffic signals using C++ and the OpenCV library.</p>
-                <p>Tested with real-world data.</p>
-                <ul class="stuff">
-                  <li><i class="devicon-cplusplus-plain"></i> <i class="devicon-opencv-plain"></i></li>
-                  <li><a href="https://github.com/MAPReiff/CPE462-PedestrianSystem-2022S">Learn More<i
-                        class="icon-arrow-right22"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="row">
-          <!-- GPT 3 Bot -->
-          <div class="col-md-4">
-            <div class="fh5co-projects animate-box">
-              <!-- <a href="#" class="blog-bg" style="background-image: url(images/portfolio-1.jpg);"></a> -->
-              <div class="blog-text">
-                <h3>GPT-3 Chatbot</h3>
-                <span class="posted_on">Jun 2021 - Oct 2021</span>
-                <p>Developed a chatbot using OpenAI's GPT-3 model APIs to converse with users on Discord.</p>
-                <p>Implemented a memory system so the bot was able to remember chat history.</p>
-                <ul class="stuff">
-                  <li><i class="devicon-javascript-plain"></i> <i class="devicon-nodejs-plain"></i> <i
-                      class="devicon-discordjs-plain"></i></li>
-                  <li></li>
-                </ul>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- GPT 2 Bot -->
-          <div class="col-md-4">
-            <div class="fh5co-projects animate-box">
-              <!-- <a href="#" class="blog-bg" style="background-image: url(images/portfolio-1.jpg);"></a> -->
-              <div class="blog-text">
-                <h3>GPT-2 Chatbot</h3>
-                <span class="posted_on">May 2021 - Jul 2021</span>
-                <p>Developed a chatbot using a custom-trained implementation of OpenAI's GPT-2 model based on my
-                  friends' chat history.</p>
-                <p>Made use of Google Colab for GPU computing while training the model.
-                </p>
-                <ul class="stuff">
-                  <li><i class="devicon-python-plain"></i> <i class="devicon-googlecloud-plain"></i></li>
-                  <li></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- E122 Weather Station -->
-          <div class="col-md-4">
-            <div class="fh5co-projects animate-box">
-              <!-- <a href="#" class="blog-bg" style="background-image: url(images/portfolio-1.jpg);"></a> -->
-              <div class="blog-text">
-                <h3>Weather Station</h3>
-                <span class="posted_on">Jan 2020 - May 2020</span>
-                <p>Designed and programmed an Arduino-based IoT weather station using sensors to collect weather data
-                  and upload it to an external server and display the data in LabView using web API calls.<br><br></p>
-                <ul class="stuff">
-                  <li><i class="devicon-labview-plain"></i> <i class="devicon-arduino-plain"></i> <i
-                      class="devicon-cplusplus-plain"></i></li>
-                  <li></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-
-
-          <!-- E121 Robot -->
-          <div class="col-md-4">
-            <div class="fh5co-projects animate-box">
-              <a class="blog-bg" style="background-image: url(images/e121-robot.gif);"></a>
-              <div class="blog-text">
-                <h3>Autonomous Robot</h3>
-                <span class="posted_on">Sep 2019 - Dec 2019</span>
-                <p>Designed and programmed an Arduino-based mobile robot to complete a series of objectives without
-                  human intervention.</p>
-                <ul class="stuff">
-                  <li><i class="devicon-arduino-plain"></i> <i class="devicon-cplusplus-plain"></i></li>
-                  <li></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- Zamasu -->
-          <div class="col-md-4">
-            <div class="fh5co-projects animate-box">
-              <!-- <a href="#" class="blog-bg" style="background-image: url(images/portfolio-1.jpg);"></a> -->
-              <div class="blog-text">
-                <h3><a href="https://github.com/MAPReiff/Zamasu">Zamasu</a></h3>
-                <span class="posted_on">Feb 2018 - May 2018</span>
-                <p>Developed a Discord bot strictly designed around community moderation, that was utilized by over 500
-                  communities.</p>
-                <p>Features included: automated mod logging, kicking users, banning users, warning users, invite
-                  detection, and custom per community administrator defined banned word filtering and deletion.
-                </p>
-                <p>Made use of RethinkDB to store community and user data.</p>
-                <ul class="stuff">
-                  <li><i class="devicon-javascript-plain"></i> <i class="devicon-nodejs-plain"></i> <i
-                      class="devicon-discordjs-plain"></i></li>
-                  <li><a href="https://github.com/MAPReiff/Zamasu">Learn More<i class="icon-arrow-right22"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- M8 bot -->
-          <div class="col-md-4">
-            <div class="fh5co-projects animate-box">
-              <!-- <a href="#" class="blog-bg" style="background-image: url(images/portfolio-1.jpg);"></a> -->
-              <div class="blog-text">
-                <h3><a href="https://github.com/MAPReiff/M8-Bot">M8 Bot</a></h3>
-                <span class="posted_on">Jan 2017 - Jun 2019</span>
-                <p>Developed and programmed M8 Bot using Node JS, a chatbot made for the Discord chat platform, that was
-                  utilized by over 4,600 communities.</p>
-                <p>Its main purpose was to automatically announce to Discord communities when users of Twitch or
-                  Mixer, two popular live-streaming platforms, started a live stream.</p>
-                <p>Made use of RethinkDB to store community and user data.</p>
-                <ul class="stuff">
-                  <li><i class="devicon-javascript-plain"></i> <i class="devicon-nodejs-plain"></i> <i
-                      class="devicon-discordjs-plain"></i></li>
-                  <li><a href="https://github.com/MAPReiff/M8-Bot">Learn More<i class="icon-arrow-right22"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <!-- Contact -->
-    <div id="fh5co-contact" class="fh5co-bg-dark">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row animate-box">
-          <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-            <h2>Let's get in touch!</h2>
-            <p>Shoot me an email at <a href="mailto:me@mreiff.dev">me@mreiff.dev</a></p>
-            <p>Follow me on GitHub at <a href="https://github.com/MAPReiff/">@MAPReiff</a></p>
-            <p>Connect with me on LinkedIn at <a href="https://www.linkedin.com/in/mitchell-reiff">@mitchell-reiff</a>
-            </p>
+        <div class="md:w-2/3 md:pl-10">
+          <div class="prose max-w-none">
+            <h3 class="text-2xl font-semibold mb-4 text-gray-800">Hello There!</h3>
+            <p class="text-lg text-gray-700 mb-6">Hello, welcome to my website! My name is Mitchell and I am a Computer
+              Engineer from Bayonne, NJ.</p>
+            <p class="text-lg text-gray-700">I currently work as a Junior Technical Development & Quality Analyst at
+              Build-A-Bear Workshop, working on e-commerce related development projects and QA.</p>
           </div>
         </div>
       </div>
     </div>
+  </section>
 
-
-    <div id="fh5co-footer">
-      <div class="container">
-        <div class="row">
-          <div id="webring" class="text-center">
-            <!-- the webring will automatically appear here -->
+  <!-- Experience Section -->
+  <section id="experience" class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold mb-12 text-center gradient-text">Work Experience</h2>
+      <div class="space-y-8">
+        <!-- Timeline item -->
+        <div class="relative timeline-item pl-10">
+          <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center">
+            <i class="fas fa-briefcase text-indigo-600"></i>
           </div>
-          <br>
-          <div class="col-md-12">
-            <p>&copy; 2024 Mitchell Reiff. All Rights Reserved.</p>
+          <div class="bg-white p-6 rounded-lg shadow-sm">
+            <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+              <h3 class="text-xl font-semibold">Junior Technical Development & Quality Analyst</h3>
+              <span class="text-indigo-600 font-medium">2023 - Present</span>
+            </div>
+            <h4 class="text-lg text-gray-600 mb-4">Build-A-Bear Workshop</h4>
+            <ul class="list-disc pl-5 space-y-2 text-gray-700">
+              <!-- <li>Work on the IT department's web team on the maintenance and development of two websites using Salesforce Commerce Cloud SFRA serving as the primary Quality Assurance Engineer for web projects.</li>
+                            <li>Perform regular smoke testing and regression testing across both websites to ensure feature requests are implemented properly and critical functionality is maintained.</li>
+                            <li>Manage and complete programming tasks using Jira for project tracking and task management, ensuring timely and accurate execution and delivery of feature requests, updates, and bug fixes.</li>
+                            <li>Diagnose and suggest solutions to critical site issues to ensure fixes are implemented promptly to minimize the number of lost orders.</li>
+                            <li>Assist the customer service team regarding invalid and failed web orders in Deck Commerce to ensure customer orders are all fulfilled.</li>
+                            <li>Employ tools such as Contentsquare and Siteimprove to identify and report errors that may lead to a loss of customer conversion and revenue.</li> -->
+              <li>Serve as the lead QA Engineer for two Salesforce Commerce Cloud (SFRA) websites, responsible for
+                regression, smoke, and post-release testing across all feature deployments, ensuring 99.9% uptime.</li>
+              <li>Own and manage vendor relationships with Deck Commerce, Uber, Brainstorm, and Adyen, acting as the
+                primary liaison between internal stakeholders and external partners.</li>
+              <li>Lead testing efforts for high-impact e-commerce initiatives including Omnichannel Inventory, Uber
+                Direct integration, and FedEx shipping estimate APIs — all of which improved order fulfillment, delivery
+                accuracy, and customer satisfaction.</li>
+              <li>Develop and implement frontend enhancements such as promo messaging logic and gift message printing;
+                use JavaScript and SFCC development tools to release production-ready features.</li>
+              <li>Manage Jira workflows for feature development, bug resolution, and QA task assignments; take ownership
+                of regression processes and lead test coordination across internal teams.</li>
+              <li>Collaborate cross-functionally with customer service, development, and external vendors to resolve
+                failed orders, enhance checkout UX, and ensure seamless API communication with platforms like
+                ShipEngine, Adyen, Signifyd, and PayPal.</li>
+              <li>Train business users on shipping logic (e.g., holiday overrides), support new team members in QA
+                methodologies, and streamline tools like Deck, Adyen, and SFCC for account access.</li>
+              <li>Conduct exploratory investigations and root cause analyses for edge-case issues, contributing to
+                long-term stability and reducing downstream errors across fulfillment systems.</li>
+              <li>Use tools like Postman, BrowserStack, Contentsquare, and Siteimprove to ensure web functionality,
+                accessibility, and data accuracy across desktop and mobile.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Timeline item -->
+        <div class="relative timeline-item pl-10">
+          <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center">
+            <i class="fas fa-briefcase text-indigo-600"></i>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-sm">
+            <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+              <h3 class="text-xl font-semibold">E-Commerce IT Technician</h3>
+              <span class="text-indigo-600 font-medium">2022 - 2023</span>
+            </div>
+            <h4 class="text-lg text-gray-600 mb-4">Conair LLC</h4>
+            <ul class="list-disc pl-5 space-y-2 text-gray-700">
+              <li>Create email marketing blasts using MJML, Email on Acid, and Acoustic based on Figma designs for
+                customer mailing lists of over 400,000 people.</li>
+              <li>Assist IT department with projects including setup, migration, and deployment of user laptops using
+                Microsoft Deployment Toolkit, Active Directory, and BitLocker through Intune. Develop scripts to
+                automate IT tasks.</li>
+              <li>Perform all responsibilities from prior Digital Support & E-Commerce Associate role.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Timeline item -->
+        <div class="relative timeline-item pl-10">
+          <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center">
+            <i class="fas fa-briefcase text-indigo-600"></i>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-sm">
+            <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
+              <h3 class="text-xl font-semibold">Digital Support & E-Commerce Associate</h3>
+              <span class="text-indigo-600 font-medium">2021 - 2022</span>
+            </div>
+            <h4 class="text-lg text-gray-600 mb-4">Conair LLC</h4>
+            <ul class="list-disc pl-5 space-y-2 text-gray-700">
+              <li>Worked in IT department on maintenance and creation of storefront websites using Salesforce Commerce
+                Cloud and communicated with internal and third-party groups for bug fixes and feature requests.</li>
+              <li>Created scripts to assist with data collection, manipulation, analysis, and importing for product
+                details, price books, and customer data.</li>
+              <li>Served as Technical PM of Customer Service and handled internal support tickets for product updates,
+                asset updates, order/customer information, and troubleshooting on sites. Utilized Kount and Stripe for
+                purchasing-related issues.</li>
+              <li>Attended trade shows as part of IT team responsible for networking and point of sale system operation
+                and providing support for our custom sales application across large sections of the show floor.</li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
+  </section>
 
-    <div class="gototop js-top">
-      <a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
+  <!-- Education Section -->
+  <section id="education" class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold mb-12 text-center gradient-text">Education</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Education Card -->
+        <div class="bg-gray-50 p-6 rounded-xl shadow-sm">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center mr-4">
+              <i class="fas fa-graduation-cap text-indigo-600"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold">Bachelor of Engineering</h3>
+              <p class="text-indigo-600">2019 - 2023</p>
+            </div>
+          </div>
+          <h4 class="text-lg font-medium mb-2">Stevens Institute of Technology</h4>
+          <p class="text-gray-700 mb-4">Computer Engineering</p>
+          <ul class="list-disc pl-5 space-y-1 text-gray-600">
+            <li>Vice President of the Stevens Linux Users Group</li>
+            <li>Dean's List</li>
+          </ul>
+        </div>
+
+        <!-- Education Card -->
+        <div class="bg-gray-50 p-6 rounded-xl shadow-sm">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center mr-4">
+              <i class="fas fa-school text-indigo-600"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold">High School Diploma</h3>
+              <p class="text-indigo-600">2015 - 2019</p>
+            </div>
+          </div>
+          <h4 class="text-lg font-medium mb-2">The Beacon School</h4>
+          <p class="text-gray-700 mb-4">3.9/4 GPA</p>
+          <ul class="list-disc pl-5 space-y-1 text-gray-600">
+            <li>Teacher's assistant during 10th and 12th grade</li>
+          </ul>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <!-- jQuery -->
-    <script src="js/jquery.min.js"></script>
-    <!-- jQuery Easing -->
-    <script src="js/jquery.easing.1.3.js"></script>
-    <!-- Bootstrap -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- Waypoints -->
-    <script src="js/jquery.waypoints.min.js"></script>
+  <!-- Skills Section -->
+  <section id="skills" class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold mb-12 text-center gradient-text">Skills</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+        <div class="skill-pill bg-white px-4 py-3 rounded-lg shadow-sm text-center font-medium transition">
+          <i class="fab fa-js text-yellow-400 mr-2"></i> JavaScript
+        </div>
+        <div class="skill-pill bg-white px-4 py-3 rounded-lg shadow-sm text-center font-medium transition">
+          <i class="fab fa-node-js text-green-500 mr-2"></i> Node.js
+        </div>
+        <div class="skill-pill bg-white px-4 py-3 rounded-lg shadow-sm text-center font-medium transition">
+          <i class="fas fa-code text-blue-600 mr-2"></i> C++
+        </div>
+        <div class="skill-pill bg-white px-4 py-3 rounded-lg shadow-sm text-center font-medium transition">
+          <i class="fab fa-python text-blue-400 mr-2"></i> Python
+        </div>
+        <div class="skill-pill bg-white px-4 py-3 rounded-lg shadow-sm text-center font-medium transition">
+          <i class="fab fa-java text-red-500 mr-2"></i> Java
+        </div>
+        <div class="skill-pill bg-white px-4 py-3 rounded-lg shadow-sm text-center font-medium transition">
+          <i class="fas fa-terminal text-gray-600 mr-2"></i> Bash
+        </div>
+        <div class="skill-pill bg-white px-4 py-3 rounded-lg shadow-sm text-center font-medium transition">
+          <i class="fab fa-html5 text-orange-500 mr-2"></i> HTML
+        </div>
+        <div class="skill-pill bg-white px-4 py-3 rounded-lg shadow-sm text-center font-medium transition">
+          <i class="fas fa-file-alt text-gray-600 mr-2"></i> Markdown
+        </div>
+        <div class="skill-pill bg-white px-4 py-3 rounded-lg shadow-sm text-center font-medium transition">
+          <i class="fab fa-git-alt text-orange-600 mr-2"></i> Git
+        </div>
+        <div class="skill-pill bg-white px-4 py-3 rounded-lg shadow-sm text-center font-medium transition">
+          <i class="fab fa-linux text-black mr-2"></i> Linux
+        </div>
+        <div class="skill-pill bg-white px-4 py-3 rounded-lg shadow-sm text-center font-medium transition">
+          <i class="fab fa-docker text-blue-400 mr-2"></i> Docker
+        </div>
+        <div class="skill-pill bg-white px-4 py-3 rounded-lg shadow-sm text-center font-medium transition">
+          <i class="fab fa-salesforce text-blue-400 mr-2"></i> SFCC
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Projects Section -->
+  <section id="projects" class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold mb-12 text-center gradient-text">Projects</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project Card Omnichannel-->
+        <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+          <div class="h-48 bg-gradient-to-r from-indigo-100 to-purple-100 flex items-center justify-center">
+            <i class="fas fa-boxes text-6xl text-indigo-600"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Omnichannel Inventory for E-Commerce</h3>
+            <p class="text-gray-600 mb-4">May 2024 - Mar 2025</p>
+            <p class="text-gray-700 mb-4">Build-A-Bear Workshop - Collaborated with external development partner Brainstorm on testing, scoping and
+              development of a custom Omnichannel Inventory solution. Implemented integration with Deck Commerce OMS to
+              leverage backroom inventory across retail stores, significantly improving online availability.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Postman API</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Quality Assurance</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">SFCC</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">JSON</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">XML</span>
+            </div>
+          </div>
+        </div>
 
-    <!-- Main -->
-    <script src="js/main.js"></script>
+        <!-- Project Card Uber US-->
+        <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+          <div class="h-48 bg-gradient-to-r from-indigo-100 to-purple-100 flex items-center justify-center">
+            <i class="fas fa-brands fa-uber text-6xl text-indigo-600"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Uber Direct Same Day Delivery Integration</h3>
+            <p class="text-gray-600 mb-4">Apr 2024 - Mar 2025</p>
+            <p class="text-gray-700 mb-4">Build-A-Bear Workshop - Led QA for Uber Direct integration into SFCC for US
+              market, ensuring seamless functionality. Acted as liaison between Uber, developers, and stakeholders.
+              Rolled out to 240+ US stores, exceeding previous provider's annual volume in first month.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">JavaScript</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Quality Assurance</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Postman API</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">SFCC</span>
+            </div>
+          </div>
+        </div>
 
+        <!-- Project Card FedEx -->
+        <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+          <div class="h-48 bg-gradient-to-r from-indigo-100 to-purple-100 flex items-center justify-center">
+            <i class="fa-brands fa-fedex text-6xl text-indigo-600"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Enhanced Delivery Estimates via FedEx API</h3>
+            <p class="text-gray-600 mb-4">Jul 2024 - Feb 2025</p>
+            <p class="text-gray-700 mb-4">Build-A-Bear Workshop - Contributed to implementing FedEx API to provide
+              accurate shipping estimates for U.S. customers at checkout. Acted as liaison between internal teams and
+              Brainstorm for implementation, bug fixes, and feature coordination.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Postman API</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Quality Assurance</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">JSON</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">SFCC</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card Royal Mail DPD -->
+        <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+          <div class="h-48 bg-gradient-to-r from-indigo-100 to-purple-100 flex items-center justify-center">
+            <i class="fas fa-truck-fast text-6xl text-indigo-600"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Royal Mail to DPD Migration for UK Stores</h3>
+            <p class="text-gray-600 mb-4">May 2024 - Nov 2024</p>
+            <p class="text-gray-700 mb-4">Build-A-Bear Workshop - Led the IT side of the transition from Royal Mail to
+              DPD, coordinating with UK team, DPD, Deck Commerce, and ShipEngine to ensure seamless migration.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Postman API</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Quality Assurance</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">SFCC</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">JSON</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card Tikit-->
+        <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+          <div class="h-48 bg-gradient-to-r from-indigo-100 to-purple-100 flex items-center justify-center">
+            <i class="fas fa-ticket-alt text-6xl text-indigo-600"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Tikit</h3>
+            <p class="text-gray-600 mb-4">Mar 2023 - May 2023</p>
+            <p class="text-gray-700 mb-4">An IT support ticketing web app created with JavaScript, Node.js, MongoDB,
+              Express.js, Handlebars, and Bootstrap.</p>
+            <a href="https://github.com/MAPReiff/Tikit"
+              class="text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center">
+              Learn More <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+            <p>&nbsp;</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">JavaScript</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Node.js</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">MongoDB</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Express.js</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Handlebars</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card Psyche -->
+        <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+          <div class="h-48 bg-gradient-to-r from-indigo-100 to-purple-100 flex items-center justify-center">
+            <i class="fas fa-brain text-6xl text-indigo-600"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Psyche</h3>
+            <p class="text-gray-600 mb-4">Sep 2022 - May 2023</p>
+            <p class="text-gray-700 mb-4">Developed a hardware and software solution to tackle the issue of inadequate
+              and imprecise identification of stress.</p>
+            <p class="text-green-600 font-medium mb-4">Winner of the 2023 David and GG Farber Societal Impact Award</p>
+            <a href="https://sites.google.com/view/psyche24/home"
+              class="text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center">
+              Learn More <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+            <p>&nbsp;</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Processing</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Java</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card Pedestrian System-->
+        <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+          <div class="h-48 bg-gradient-to-r from-indigo-100 to-purple-100 flex items-center justify-center">
+            <i class="fas fa-walking text-6xl text-indigo-600"></i>
+            <!-- <i><img src="/images/opencv_demo1.png" alt="Gif showcasing the Autonomous Robot project."/> </i> -->
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Pedestrian System</h3>
+            <p class="text-gray-600 mb-4">Feb 2022 - May 2022</p>
+            <p class="text-gray-700 mb-4">Developed a program that can detect the presence of people in a crosswalk to
+              determine if it is safe to change traffic signals using C++ and the OpenCV library.</p>
+            <a href="https://github.com/MAPReiff/CPE462-PedestrianSystem-2022S"
+              class="text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center">
+              Learn More <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+            <p>&nbsp;</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">C++</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">OpenCV</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card GPT-3 -->
+        <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+          <div class="h-48 bg-gradient-to-r from-indigo-100 to-purple-100 flex items-center justify-center">
+            <i class="fas fa-robot text-6xl text-indigo-600"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">GPT-3 Chatbot</h3>
+            <p class="text-gray-600 mb-4">Jun 2021 - Oct 2021</p>
+            <p class="text-gray-700 mb-4">Developed a chatbot using OpenAI's GPT-3 model APIs to converse with users on
+              Discord with memory system for chat history.</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">JavaScript</span>
+                <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Node.js</span>
+              </div>
+          </div>
+        </div>
+
+        <!-- Project Card GPT-2 -->
+        <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+          <div class="h-48 bg-gradient-to-r from-indigo-100 to-purple-100 flex items-center justify-center">
+            <i class="fas fa-robot text-6xl text-indigo-600"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">GPT-2 Chatbot</h3>
+            <p class="text-gray-600 mb-4">May 2021 - Jul 2021</p>
+            <p class="text-gray-700 mb-4">Developed a chatbot using a custom-trained implementation of OpenAI's GPT-2
+              model based on friends' chat history.</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Python</span>
+                <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Google Cloud</span>
+              </div>
+          </div>
+        </div>
+
+        <!-- Project Card Weather Station-->
+        <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+          <div class="h-48 bg-gradient-to-r from-indigo-100 to-purple-100 flex items-center justify-center">
+            <i class="fas fa-cloud-sun text-6xl text-indigo-600"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Weather Station</h3>
+            <p class="text-gray-600 mb-4">Jan 2020 - May 2020</p>
+            <p class="text-gray-700 mb-4">Designed and programmed an Arduino-based IoT weather station using sensors to
+              collect weather data and upload it to an external server.</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">LabVIEW</span>
+                <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Arduino</span>
+                <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">C++</span>
+              </div>
+          </div>
+        </div>
+
+        <!-- Project Card Autonomous Robot-->
+        <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+          <div class="h-48 bg-gradient-to-r from-indigo-100 to-purple-100 flex items-center justify-center">
+            <!-- <i class="fas fa-robot text-6xl text-indigo-600"></i> -->
+            <i><img src="/images/e121-robot.gif" alt="Gif showcasing the Autonomous Robot project."/> </i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Autonomous Robot</h3>
+            <p class="text-gray-600 mb-4">Sep 2019 - Dec 2019</p>
+            <p class="text-gray-700 mb-4">Designed and programmed an Arduino-based mobile robot to complete a series of objectives without human intervention.</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Arduino</span>
+                <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">C++</span>
+              </div>
+          </div>
+        </div>
+
+         <!-- Project Card Zamasu-->
+         <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+          <div class="h-48 bg-gradient-to-r from-indigo-100 to-purple-100 flex items-center justify-center">
+            <i class="fas fa-robot text-6xl text-indigo-600"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Zamasu</h3>
+            <p class="text-gray-600 mb-4">Feb 2018 - May 2018</p>
+            <p class="text-gray-700 mb-4">Developed a Discord bot strictly designed around community moderation, that was utilized by over 500 communities.</p>
+            <a href="https://github.com/MAPReiff/Zamasu"
+              class="text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center">
+              Learn More <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+            <p>&nbsp;</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">JavaScript</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Node.js</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">RethinkDB</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card M8-->
+        <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+          <div class="h-48 bg-gradient-to-r from-indigo-100 to-purple-100 flex items-center justify-center">
+            <i class="fas fa-robot text-6xl text-indigo-600"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">M8 Bot</h3>
+            <p class="text-gray-600 mb-4">Jan 2017 - Jun 2019</p>
+            <p class="text-gray-700 mb-4">Developed and programmed M8 Bot using Node JS, a chatbot made for the Discord chat platform, that was utilized by over 4,600 communities.</p>
+            <a href="https://github.com/MAPReiff/M8-Bot"
+              class="text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center">
+              Learn More <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+            <p>&nbsp;</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">JavaScript</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Node.js</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">RethinkDB</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-gradient-to-r from-indigo-50 to-purple-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold mb-12 text-center gradient-text">Get In Touch</h2>
+      <div class="max-w-2xl mx-auto text-center">
+        <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+        <p class="text-gray-700 mb-8 text-lg">Feel free to reach out to me for any questions or opportunities!</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white p-6 rounded-xl shadow-sm">
+            <div class="w-12 h-12 mx-auto mb-4 rounded-full bg-indigo-100 flex items-center justify-center">
+              <i class="fas fa-envelope text-indigo-600"></i>
+            </div>
+            <h4 class="font-medium text-lg mb-2">Email</h4>
+            <a href="mailto:me@mreiff.dev" class="text-indigo-600 hover:text-indigo-800">me@mreiff.dev</a>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-sm">
+            <div class="w-12 h-12 mx-auto mb-4 rounded-full bg-indigo-100 flex items-center justify-center">
+              <i class="fas fa-phone text-indigo-600"></i>
+            </div>
+            <h4 class="font-medium text-lg mb-2">Phone</h4>
+            <a href="tel:+19144170000" class="text-indigo-600 hover:text-indigo-800">+1 914 417 0000</a>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-sm">
+            <div class="w-12 h-12 mx-auto mb-4 rounded-full bg-indigo-100 flex items-center justify-center">
+              <i class="fas fa-map-marker-alt text-indigo-600"></i>
+            </div>
+            <h4 class="font-medium text-lg mb-2">Location</h4>
+            <p class="text-gray-600">Bayonne, NJ</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-4 md:mb-0">
+          <a href="#" class="text-xl font-bold gradient-text">Mitchell Reiff</a>
+          <p class="text-gray-400 mt-2">Computer Engineer & Web Developer</p>
+        </div>
+        <div class="flex space-x-6">
+          <a href="https://github.com/MAPReiff/" class="text-gray-400 hover:text-white transition">
+            <i class="fab fa-github text-xl"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/mitchell-reiff/" class="text-gray-400 hover:text-white transition">
+            <i class="fab fa-linkedin text-xl"></i>
+          </a>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+        <p>&copy; 2023 Mitchell Reiff. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    document.getElementById('menu-btn').addEventListener('click', function () {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('hidden');
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth'
+          });
+
+          // Close mobile menu if open
+          const menu = document.getElementById('menu');
+          menu.classList.add('hidden');
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>
