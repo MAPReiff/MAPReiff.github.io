@@ -4,9 +4,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mitchell Reiff - Computer Engineer</title>
+  <title>Mitchell Reiff - Salesforce Commerce Cloud · Development, Quality & Delivery</title>
+  
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="Mitchell Reiff - Salesforce Commerce Cloud · Development, Quality & Delivery">
+  <meta name="description" content="Personal portfolio of Mitchell Reiff, Technical Development & Quality Analyst specializing in Salesforce Commerce Cloud (SFRA), CI/CD build automation, API integrations, and enterprise delivery.">
+  <meta name="keywords" content="Mitchell Reiff, Salesforce Commerce Cloud, SFCC, SFRA, QA Engineer, Quality Analyst, Web Developer, Computer Engineering, CI/CD, Bitbucket Pipelines, Stevens Institute of Technology">
+  <meta name="author" content="Mitchell Reiff">
+  <link rel="canonical" href="https://mreiff.dev">
+
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mreiff.dev/">
+  <meta property="og:title" content="Mitchell Reiff - Salesforce Commerce Cloud · Development, Quality & Delivery">
+  <meta property="og:description" content="Five years building and supporting enterprise Salesforce Commerce Cloud storefronts. Production SFRA code, CI/CD pipeline optimization, release engineering, and vendor integrations.">
+  <meta property="og:image" content="https://mreiff.dev/images/me.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://mreiff.dev/">
+  <meta property="twitter:title" content="Mitchell Reiff - Salesforce Commerce Cloud · Development, Quality & Delivery">
+  <meta property="twitter:description" content="Five years building and supporting enterprise Salesforce Commerce Cloud storefronts. Production SFRA code, CI/CD pipeline optimization, release engineering, and vendor integrations.">
+  <meta property="twitter:image" content="https://mreiff.dev/images/me.jpg">
+
+  <!-- Performance & Styles -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- JSON-LD Structured Data for AEO / AI Search Engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mitchell Reiff",
+    "url": "https://mreiff.dev",
+    "image": "https://mreiff.dev/images/me.jpg",
+    "jobTitle": "Technical Development & Quality Analyst",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Build-A-Bear Workshop"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Stevens Institute of Technology",
+      "url": "https://www.stevens.edu"
+    },
+    "sameAs": [
+      "https://github.com/MAPReiff",
+      "https://www.linkedin.com/in/mitchell-reiff/"
+    ],
+    "knowsAbout": [
+      "Salesforce Commerce Cloud (SFRA)",
+      "B2C Commerce Development",
+      "Bitbucket CI/CD Pipelines",
+      "Omnichannel Inventory",
+      "API Integrations & Postman",
+      "Quality Assurance & Release Management",
+      "Self-Hosted LLMs & Virtualization",
+      "Full Stack Web Development"
+    ]
+  }
+  </script>
+
   <style>
     .gradient-text {
       background: linear-gradient(90deg, #3b82f6, #8b5cf6);
@@ -31,7 +91,12 @@
     }
 
     .skill-pill:hover {
-      transform: scale(1.05);
+      transform: scale(1.03);
+    }
+
+    .filter-btn.active {
+      background-color: #4f46e5;
+      color: #ffffff;
     }
 
     #menu-toggle:checked+#menu {
@@ -48,15 +113,19 @@
         <div class="flex items-center">
           <a href="#" class="text-xl font-bold gradient-text">Mitchell Reiff</a>
         </div>
-        <div class="hidden md:flex items-center space-x-8">
-          <a href="#about" class="text-gray-700 hover:text-indigo-600 transition">About</a>
-          <a href="#experience" class="text-gray-700 hover:text-indigo-600 transition">Experience</a>
-          <a href="#education" class="text-gray-700 hover:text-indigo-600 transition">Education</a>
-          <a href="#skills" class="text-gray-700 hover:text-indigo-600 transition">Skills</a>
-          <a href="#projects" class="text-gray-700 hover:text-indigo-600 transition">Projects</a>
+        <div class="hidden md:flex items-center space-x-7">
+          <a href="#about" class="text-gray-700 hover:text-indigo-600 transition font-medium">About</a>
+          <a href="#experience" class="text-gray-700 hover:text-indigo-600 transition font-medium">Experience</a>
+          <a href="#education" class="text-gray-700 hover:text-indigo-600 transition font-medium">Education</a>
+          <a href="#skills" class="text-gray-700 hover:text-indigo-600 transition font-medium">Skills</a>
+          <a href="#projects" class="text-gray-700 hover:text-indigo-600 transition font-medium">Projects</a>
+          <a href="assets/MReiff_Resume.pdf" target="_blank" rel="noopener noreferrer"
+            class="bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border border-indigo-200 px-3.5 py-1.5 rounded-lg font-medium text-sm transition inline-flex items-center">
+            <i class="fas fa-file-pdf mr-1.5 text-indigo-600"></i> Resume
+          </a>
         </div>
         <div class="md:hidden flex items-center">
-          <button id="menu-btn" class="text-gray-700 focus:outline-none">
+          <button id="menu-btn" class="text-gray-700 focus:outline-none" aria-label="Toggle Navigation">
             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
@@ -66,7 +135,7 @@
     </div>
     <!-- Mobile menu -->
     <div id="menu" class="hidden md:hidden bg-white border-t border-gray-200">
-      <div class="px-2 pt-2 pb-3 space-y-1">
+      <div class="px-3 pt-2 pb-3 space-y-1">
         <a href="#about"
           class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">About</a>
         <a href="#experience"
@@ -77,6 +146,10 @@
           class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Skills</a>
         <a href="#projects"
           class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Projects</a>
+        <a href="assets/MReiff_Resume.pdf" target="_blank" rel="noopener noreferrer"
+          class="block px-3 py-2 rounded-md text-base font-medium text-indigo-600 bg-indigo-50 hover:bg-indigo-100">
+          <i class="fas fa-file-pdf mr-1.5"></i> View Resume PDF
+        </a>
       </div>
     </div>
   </nav>
@@ -87,26 +160,29 @@
       <div class="flex flex-col md:flex-row items-center">
         <div class="md:w-1/2 mb-10 md:mb-0">
           <h1 class="text-4xl md:text-5xl font-bold mb-4">Hi, I'm <span class="gradient-text">Mitchell Reiff</span></h1>
-          <h2 class="text-2xl md:text-3xl text-gray-600 mb-6">Computer Engineer & Web Developer</h2>
-          <p class="text-lg text-gray-700 mb-8">I build digital solutions and ensure quality experiences for web
-            applications. Currently working as a Junior Technical Development & Quality Analyst at Build-A-Bear
-            Workshop.</p>
-          <div class="flex space-x-4">
-            <a href="#contact"
-              class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-medium transition">Contact
-              Me</a>
+          <h2 class="text-2xl md:text-3xl text-gray-600 mb-6">Salesforce Commerce Cloud · Development, Quality & Delivery</h2>
+          <p class="text-lg text-gray-700 mb-8">Five years building and supporting enterprise Salesforce Commerce Cloud storefronts. I ship production SFRA code, own regression and release quality across multiple markets, optimize CI/CD pipelines, and lead mission-critical OMS, payment, and delivery integrations.</p>
+          <div class="flex flex-wrap gap-3">
+            <a href="assets/MReiff_Resume.pdf" target="_blank" rel="noopener noreferrer"
+              class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-3 rounded-lg font-medium transition inline-flex items-center shadow-sm">
+              <i class="fas fa-file-arrow-down mr-2"></i> Download Resume
+            </a>
             <a href="#projects"
-              class="border border-indigo-600 text-indigo-600 hover:bg-indigo-50 px-6 py-3 rounded-lg font-medium transition">View
-              Projects</a>
+              class="border border-indigo-600 text-indigo-600 hover:bg-indigo-50 px-5 py-3 rounded-lg font-medium transition inline-flex items-center">
+              View Projects
+            </a>
+            <a href="#contact"
+              class="bg-white border border-gray-300 text-gray-700 hover:bg-gray-50 px-5 py-3 rounded-lg font-medium transition inline-flex items-center">
+              Contact Me
+            </a>
           </div>
         </div>
         <div class="md:w-1/2 flex justify-center">
           <div
             class="relative w-64 h-64 md:w-80 md:h-80 bg-white rounded-full shadow-xl overflow-hidden border-4 border-white">
-            <!-- Placeholder for profile image -->
+            <!-- Profile image -->
             <div class="w-full h-full bg-gradient-to-r from-indigo-200 to-purple-200 flex items-center justify-center">
-              <!-- <span class="text-6xl font-bold text-indigo-600">MR</span> -->
-               <img src="/images/me.jpg" alt="A photo of Mitchell Reiff" />
+               <img src="images/me.jpg" alt="A photo of Mitchell Reiff" class="w-full h-full object-cover" width="320" height="320" />
             </div>
           </div>
         </div>
@@ -149,10 +225,9 @@
         <div class="md:w-2/3 md:pl-10">
           <div class="prose max-w-none">
             <h3 class="text-2xl font-semibold mb-4 text-gray-800">Hello There!</h3>
-            <p class="text-lg text-gray-700 mb-6">Hello, welcome to my website! My name is Mitchell and I am a Computer
-              Engineer from Bayonne, NJ.</p>
-            <p class="text-lg text-gray-700">I currently work as a Junior Technical Development & Quality Analyst at
-              Build-A-Bear Workshop, working on e-commerce related development projects and QA.</p>
+            <p class="text-lg text-gray-700 mb-6">Hello, welcome to my website! My name is Mitchell and I am a Computer Engineer and Web Developer based in Bayonne, NJ.</p>
+            <p class="text-lg text-gray-700 mb-6">I currently work as a Technical Development & Quality Analyst at Build-A-Bear Workshop, shipping production SFRA features, leading end-to-end regression and release engineering, and managing key integrations across OMS, payments, and delivery vendors.</p>
+            <p class="text-lg text-gray-700">With a strong background in computer engineering from Stevens Institute of Technology, I bring an analytical and systems-level approach to building scalable e-commerce solutions, optimizing build and deployment automation, and ensuring high-reliability customer experiences.</p>
           </div>
         </div>
       </div>
@@ -164,49 +239,30 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-3xl font-bold mb-12 text-center gradient-text">Work Experience</h2>
       <div class="space-y-8">
-        <!-- Timeline item -->
+        <!-- Build-A-Bear Workshop -->
         <div class="relative timeline-item pl-10">
           <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center">
             <i class="fas fa-briefcase text-indigo-600"></i>
           </div>
           <div class="bg-white p-6 rounded-lg shadow-sm">
             <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
-              <h3 class="text-xl font-semibold">Junior Technical Development & Quality Analyst</h3>
-              <span class="text-indigo-600 font-medium">2023 - Present</span>
+              <h3 class="text-xl font-semibold">Technical Development & Quality Analyst</h3>
+              <span class="text-indigo-600 font-medium">Jun 2023 - Present</span>
             </div>
-            <h4 class="text-lg text-gray-600 mb-4">Build-A-Bear Workshop</h4>
+            <h4 class="text-lg text-gray-600 mb-4">Build-A-Bear Workshop <span class="text-sm text-gray-500 font-normal">· St. Louis, MO (Remote)</span></h4>
             <ul class="list-disc pl-5 space-y-2 text-gray-700">
-              <!-- <li>Work on the IT department's web team on the maintenance and development of two websites using Salesforce Commerce Cloud SFRA serving as the primary Quality Assurance Engineer for web projects.</li>
-                            <li>Perform regular smoke testing and regression testing across both websites to ensure feature requests are implemented properly and critical functionality is maintained.</li>
-                            <li>Manage and complete programming tasks using Jira for project tracking and task management, ensuring timely and accurate execution and delivery of feature requests, updates, and bug fixes.</li>
-                            <li>Diagnose and suggest solutions to critical site issues to ensure fixes are implemented promptly to minimize the number of lost orders.</li>
-                            <li>Assist the customer service team regarding invalid and failed web orders in Deck Commerce to ensure customer orders are all fulfilled.</li>
-                            <li>Employ tools such as Contentsquare and Siteimprove to identify and report errors that may lead to a loss of customer conversion and revenue.</li> -->
-              <li>Serve as the lead QA Engineer for two Salesforce Commerce Cloud (SFRA) websites, responsible for
-                regression, smoke, and post-release testing across all feature deployments, ensuring 99.9% uptime.</li>
-              <li>Own and manage vendor relationships with Deck Commerce, Uber, Brainstorm, and Adyen, acting as the
-                primary liaison between internal stakeholders and external partners.</li>
-              <li>Lead testing efforts for high-impact e-commerce initiatives including Omnichannel Inventory, Uber
-                Direct integration, and FedEx shipping estimate APIs — all of which improved order fulfillment, delivery
-                accuracy, and customer satisfaction.</li>
-              <li>Develop and implement frontend enhancements such as promo messaging logic and gift message printing;
-                use JavaScript and SFCC development tools to release production-ready features.</li>
-              <li>Manage Jira workflows for feature development, bug resolution, and QA task assignments; take ownership
-                of regression processes and lead test coordination across internal teams.</li>
-              <li>Collaborate cross-functionally with customer service, development, and external vendors to resolve
-                failed orders, enhance checkout UX, and ensure seamless API communication with platforms like
-                ShipEngine, Adyen, Signifyd, and PayPal.</li>
-              <li>Train business users on shipping logic (e.g., holiday overrides), support new team members in QA
-                methodologies, and streamline tools like Deck, Adyen, and SFCC for account access.</li>
-              <li>Conduct exploratory investigations and root cause analyses for edge-case issues, contributing to
-                long-term stability and reducing downstream errors across fulfillment systems.</li>
-              <li>Use tools like Postman, BrowserStack, Contentsquare, and Siteimprove to ensure web functionality,
-                accessibility, and data accuracy across desktop and mobile.</li>
+              <li>Ship production SFRA development across cart, checkout, and PDP, including JSON-LD product and store schema for AI and local search, strikethrough pricing for promotions and gift packaging, per-item gifting options, and emoji sanitization before OMS handoff.</li>
+              <li>Cut Bitbucket build and deploy pipeline runtime from ~19 minutes to ~9 minutes (a 53% reduction / 2.1× speedup) by architecting an infrastructure caching solution on existing pipelines.</li>
+              <li>Took formal ownership of regression testing for US and UK storefronts; redesigned a monolithic script into modular, release-scoped test suites, cutting testing time and enabling a seamless transition from weekly to bi-weekly releases while maintaining 99.9% uptime.</li>
+              <li>Serve as the primary point of contact for Deck Commerce (OMS), Uber Direct, Adyen, and Brainstorm, and own the ConnectWise queue to triage and route all web engineering and support requests.</li>
+              <li>Led testing for the Adyen cartridge upgrade to support modern payment methods (Venmo, Afterpay/Clearpay, Apple Pay, Google Pay) and authored automation scripts to reconcile Adyen and Fiserv transaction logs against Sales Audit.</li>
+              <li>Trained web engineering team members and business partners on regression testing, Queue-it event setup, ConnectWise routing, shipping-method rules, and multi-system account provisioning.</li>
+              <li>Stepped up to lead Business Analyst responsibilities following BA departure, keeping ticket intake, backlog prioritization, and vendor follow-through moving alongside active development.</li>
             </ul>
           </div>
         </div>
 
-        <!-- Timeline item -->
+        <!-- Conair LLC -->
         <div class="relative timeline-item pl-10">
           <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center">
             <i class="fas fa-briefcase text-indigo-600"></i>
@@ -214,41 +270,14 @@
           <div class="bg-white p-6 rounded-lg shadow-sm">
             <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
               <h3 class="text-xl font-semibold">E-Commerce IT Technician</h3>
-              <span class="text-indigo-600 font-medium">2022 - 2023</span>
+              <span class="text-indigo-600 font-medium">Jul 2021 - May 2023</span>
             </div>
-            <h4 class="text-lg text-gray-600 mb-4">Conair LLC</h4>
+            <h4 class="text-lg text-gray-600 mb-4">Conair LLC <span class="text-sm text-gray-500 font-normal">· Stamford, CT (Hybrid/Remote)</span></h4>
             <ul class="list-disc pl-5 space-y-2 text-gray-700">
-              <li>Create email marketing blasts using MJML, Email on Acid, and Acoustic based on Figma designs for
-                customer mailing lists of over 400,000 people.</li>
-              <li>Assist IT department with projects including setup, migration, and deployment of user laptops using
-                Microsoft Deployment Toolkit, Active Directory, and BitLocker through Intune. Develop scripts to
-                automate IT tasks.</li>
-              <li>Perform all responsibilities from prior Digital Support & E-Commerce Associate role.</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Timeline item -->
-        <div class="relative timeline-item pl-10">
-          <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center">
-            <i class="fas fa-briefcase text-indigo-600"></i>
-          </div>
-          <div class="bg-white p-6 rounded-lg shadow-sm">
-            <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
-              <h3 class="text-xl font-semibold">Digital Support & E-Commerce Associate</h3>
-              <span class="text-indigo-600 font-medium">2021 - 2022</span>
-            </div>
-            <h4 class="text-lg text-gray-600 mb-4">Conair LLC</h4>
-            <ul class="list-disc pl-5 space-y-2 text-gray-700">
-              <li>Worked in IT department on maintenance and creation of storefront websites using Salesforce Commerce
-                Cloud and communicated with internal and third-party groups for bug fixes and feature requests.</li>
-              <li>Created scripts to assist with data collection, manipulation, analysis, and importing for product
-                details, price books, and customer data.</li>
-              <li>Served as Technical PM of Customer Service and handled internal support tickets for product updates,
-                asset updates, order/customer information, and troubleshooting on sites. Utilized Kount and Stripe for
-                purchasing-related issues.</li>
-              <li>Attended trade shows as part of IT team responsible for networking and point of sale system operation
-                and providing support for our custom sales application across large sections of the show floor.</li>
+              <li>Maintained and developed over 10 Salesforce Commerce Cloud storefronts across the brand portfolio, coordinating bug fixes and feature requests with internal teams and third-party partners.</li>
+              <li>Built JavaScript and PowerShell automation scripts for product, price book, and customer XML data imports and exports, eliminating hours of manual processing per request.</li>
+              <li>Developed responsive email marketing blasts with MJML, Email on Acid, and Acoustic from Figma designs for customer lists of over 400,000 subscribers.</li>
+              <li>Served as Technical PM of Customer Service, supported IT laptop deployment (Microsoft Deployment Toolkit, Active Directory, BitLocker via Azure and Intune), and managed networking and POS operations at national trade shows.</li>
             </ul>
           </div>
         </div>
@@ -257,44 +286,49 @@
   </section>
 
   <!-- Education Section -->
+  <!-- Education & Certifications Section -->
   <section id="education" class="py-16 bg-white">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold mb-12 text-center gradient-text">Education</h2>
+      <h2 class="text-3xl font-bold mb-12 text-center gradient-text">Education & Certifications</h2>
       <div class="grid md:grid-cols-2 gap-8">
-        <!-- Education Card -->
+        <!-- Degree Card -->
         <div class="bg-gray-50 p-6 rounded-xl shadow-sm">
           <div class="flex items-center mb-4">
             <div class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center mr-4">
-              <i class="fas fa-graduation-cap text-indigo-600"></i>
+              <i class="fas fa-graduation-cap text-indigo-600 text-xl"></i>
             </div>
             <div>
-              <h3 class="text-xl font-semibold">Bachelor of Engineering</h3>
-              <p class="text-indigo-600">2019 - 2023</p>
+              <h3 class="text-xl font-semibold">Bachelor of Engineering (with Honor)</h3>
+              <p class="text-indigo-600 font-medium">2019 - 2023</p>
             </div>
           </div>
-          <h4 class="text-lg font-medium mb-2">Stevens Institute of Technology</h4>
-          <p class="text-gray-700 mb-4">Computer Engineering</p>
-          <ul class="list-disc pl-5 space-y-1 text-gray-600">
-            <li>Vice President of the Stevens Linux Users Group</li>
-            <li>Dean's List</li>
+          <h4 class="text-lg font-medium mb-1 text-gray-800">Stevens Institute of Technology <span class="text-sm text-gray-500 font-normal">· Hoboken, NJ</span></h4>
+          <p class="text-gray-700 font-medium mb-3">Major: Computer Engineering</p>
+          <ul class="list-disc pl-5 space-y-1.5 text-gray-600 text-sm">
+            <li>Dean's List (multiple semesters)</li>
+            <li>Vice President and Founding Member, Stevens Linux Users Group (SLUG)</li>
+            <li><strong>David and GG Farber Societal Impact Award Winner</strong> (May 2023) for senior design project <em>Psyche: The Stress Evaluator</em></li>
           </ul>
         </div>
 
-        <!-- Education Card -->
+        <!-- Certifications & Training Card -->
         <div class="bg-gray-50 p-6 rounded-xl shadow-sm">
           <div class="flex items-center mb-4">
             <div class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center mr-4">
-              <i class="fas fa-school text-indigo-600"></i>
+              <i class="fas fa-certificate text-indigo-600 text-xl"></i>
             </div>
             <div>
-              <h3 class="text-xl font-semibold">High School Diploma</h3>
-              <p class="text-indigo-600">2015 - 2019</p>
+              <h3 class="text-xl font-semibold">Training & Certifications</h3>
+              <p class="text-indigo-600 font-medium">Continuous Learning</p>
             </div>
           </div>
-          <h4 class="text-lg font-medium mb-2">The Beacon School</h4>
-          <p class="text-gray-700 mb-4">3.9/4 GPA</p>
-          <ul class="list-disc pl-5 space-y-1 text-gray-600">
-            <li>Teacher's assistant during 10th and 12th grade</li>
+          <h4 class="text-lg font-medium mb-1 text-gray-800">Salesforce & Technical Accreditations</h4>
+          <p class="text-gray-700 font-medium mb-3">Professional Development</p>
+          <ul class="list-disc pl-5 space-y-1.5 text-gray-600 text-sm">
+            <li><strong>Salesforce Trailhead Academy CCD 102:</strong> B2C Commerce Developer with SFRA (Class Completion Certificate)</li>
+            <li><strong>Salesforce Trailhead:</strong> Advanced modules in SFCC development & merchandising, Page Designer, JavaScript, and Salesforce AI</li>
+            <li><strong>Databricks:</strong> Generative AI Fundamentals & AI Agent Fundamentals</li>
+            <li>The Beacon School (High School Diploma, 3.9/4.0 GPA, 2015 – 2019)</li>
           </ul>
         </div>
       </div>
@@ -304,43 +338,96 @@
   <!-- Skills Section -->
   <section id="skills" class="py-16 bg-gray-50">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold mb-12 text-center gradient-text">Skills</h2>
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-        <div class="skill-pill bg-white px-4 py-3 rounded-lg shadow-sm text-center font-medium transition">
-          <i class="fab fa-js text-yellow-400 mr-2"></i> JavaScript
+      <h2 class="text-3xl font-bold mb-12 text-center gradient-text">Technical Skills & Expertise</h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Commerce Platforms -->
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+          <div class="flex items-center mb-4 text-indigo-600 font-semibold text-lg">
+            <i class="fas fa-shopping-bag mr-3"></i>
+            <span>Commerce Platforms</span>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-pill bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-lg text-sm font-medium transition">SFCC (SFRA)</span>
+            <span class="skill-pill bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-lg text-sm font-medium transition">Page Designer</span>
+            <span class="skill-pill bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-lg text-sm font-medium transition">Business Manager</span>
+            <span class="skill-pill bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-lg text-sm font-medium transition">Demandware</span>
+            <span class="skill-pill bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-lg text-sm font-medium transition">Deck Commerce (OMS)</span>
+            <span class="skill-pill bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-lg text-sm font-medium transition">Adyen</span>
+            <span class="skill-pill bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-lg text-sm font-medium transition">Global-e</span>
+            <span class="skill-pill bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-lg text-sm font-medium transition">ShipEngine</span>
+          </div>
         </div>
-        <div class="skill-pill bg-white px-4 py-3 rounded-lg shadow-sm text-center font-medium transition">
-          <i class="fab fa-node-js text-green-500 mr-2"></i> Node.js
+
+        <!-- Languages & Core Tech -->
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+          <div class="flex items-center mb-4 text-indigo-600 font-semibold text-lg">
+            <i class="fas fa-code mr-3"></i>
+            <span>Languages & Core Tech</span>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-pill bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-lg text-sm font-medium transition"><i class="fab fa-js text-yellow-500 mr-1"></i> JavaScript (ES6+)</span>
+            <span class="skill-pill bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-lg text-sm font-medium transition"><i class="fab fa-node-js text-green-600 mr-1"></i> Node.js</span>
+            <span class="skill-pill bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-lg text-sm font-medium transition"><i class="fab fa-python text-blue-500 mr-1"></i> Python</span>
+            <span class="skill-pill bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-lg text-sm font-medium transition"><i class="fab fa-java text-red-500 mr-1"></i> Java</span>
+            <span class="skill-pill bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-lg text-sm font-medium transition"><i class="fas fa-code text-blue-600 mr-1"></i> C++</span>
+            <span class="skill-pill bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-lg text-sm font-medium transition"><i class="fab fa-php text-indigo-500 mr-1"></i> PHP</span>
+            <span class="skill-pill bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-lg text-sm font-medium transition"><i class="fab fa-html5 text-orange-500 mr-1"></i> HTML5 / CSS3</span>
+            <span class="skill-pill bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-lg text-sm font-medium transition">JSON-LD</span>
+            <span class="skill-pill bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-lg text-sm font-medium transition"><i class="fas fa-terminal text-gray-600 mr-1"></i> Bash / PowerShell</span>
+          </div>
         </div>
-        <div class="skill-pill bg-white px-4 py-3 rounded-lg shadow-sm text-center font-medium transition">
-          <i class="fas fa-code text-blue-600 mr-2"></i> C++
+
+        <!-- QA, Testing & Reliability -->
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+          <div class="flex items-center mb-4 text-indigo-600 font-semibold text-lg">
+            <i class="fas fa-check-double mr-3"></i>
+            <span>QA & Reliability</span>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-pill bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-lg text-sm font-medium transition">Regression & Smoke Testing</span>
+            <span class="skill-pill bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-lg text-sm font-medium transition">Postman API Testing</span>
+            <span class="skill-pill bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-lg text-sm font-medium transition">Test Case Design</span>
+            <span class="skill-pill bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-lg text-sm font-medium transition">Selenium WebDriver</span>
+            <span class="skill-pill bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-lg text-sm font-medium transition">BrowserStack</span>
+            <span class="skill-pill bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-lg text-sm font-medium transition">WAVE Accessibility</span>
+            <span class="skill-pill bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-lg text-sm font-medium transition">Queue-it Waiting Rooms</span>
+          </div>
         </div>
-        <div class="skill-pill bg-white px-4 py-3 rounded-lg shadow-sm text-center font-medium transition">
-          <i class="fab fa-python text-blue-400 mr-2"></i> Python
+
+        <!-- DevOps, Tooling & Delivery -->
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+          <div class="flex items-center mb-4 text-indigo-600 font-semibold text-lg">
+            <i class="fas fa-code-branch mr-3"></i>
+            <span>DevOps & Delivery</span>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-pill bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-lg text-sm font-medium transition">Bitbucket Pipelines (CI/CD)</span>
+            <span class="skill-pill bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-lg text-sm font-medium transition"><i class="fab fa-git-alt text-orange-600 mr-1"></i> Git & GitHub</span>
+            <span class="skill-pill bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-lg text-sm font-medium transition"><i class="fab fa-jira text-blue-500 mr-1"></i> Jira & Confluence</span>
+            <span class="skill-pill bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-lg text-sm font-medium transition">ConnectWise</span>
+            <span class="skill-pill bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-lg text-sm font-medium transition">ClickUp</span>
+            <span class="skill-pill bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-lg text-sm font-medium transition">MJML Email</span>
+            <span class="skill-pill bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-lg text-sm font-medium transition">Express.js & MongoDB</span>
+          </div>
         </div>
-        <div class="skill-pill bg-white px-4 py-3 rounded-lg shadow-sm text-center font-medium transition">
-          <i class="fab fa-java text-red-500 mr-2"></i> Java
-        </div>
-        <div class="skill-pill bg-white px-4 py-3 rounded-lg shadow-sm text-center font-medium transition">
-          <i class="fas fa-terminal text-gray-600 mr-2"></i> Bash
-        </div>
-        <div class="skill-pill bg-white px-4 py-3 rounded-lg shadow-sm text-center font-medium transition">
-          <i class="fab fa-html5 text-orange-500 mr-2"></i> HTML
-        </div>
-        <div class="skill-pill bg-white px-4 py-3 rounded-lg shadow-sm text-center font-medium transition">
-          <i class="fas fa-file-alt text-gray-600 mr-2"></i> Markdown
-        </div>
-        <div class="skill-pill bg-white px-4 py-3 rounded-lg shadow-sm text-center font-medium transition">
-          <i class="fab fa-git-alt text-orange-600 mr-2"></i> Git
-        </div>
-        <div class="skill-pill bg-white px-4 py-3 rounded-lg shadow-sm text-center font-medium transition">
-          <i class="fab fa-linux text-black mr-2"></i> Linux
-        </div>
-        <div class="skill-pill bg-white px-4 py-3 rounded-lg shadow-sm text-center font-medium transition">
-          <i class="fab fa-docker text-blue-400 mr-2"></i> Docker
-        </div>
-        <div class="skill-pill bg-white px-4 py-3 rounded-lg shadow-sm text-center font-medium transition">
-          <i class="fab fa-salesforce text-blue-400 mr-2"></i> SFCC
+
+        <!-- AI, Infrastructure & Systems -->
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 md:col-span-2 lg:col-span-2">
+          <div class="flex items-center mb-4 text-indigo-600 font-semibold text-lg">
+            <i class="fas fa-server mr-3"></i>
+            <span>AI, Infrastructure & Systems</span>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-pill bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-lg text-sm font-medium transition">Self-Hosted LLMs (DeepSeek, Llama, Qwen, Gemma)</span>
+            <span class="skill-pill bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-lg text-sm font-medium transition">Ollama & llama.cpp</span>
+            <span class="skill-pill bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-lg text-sm font-medium transition"><i class="fab fa-docker text-blue-500 mr-1"></i> Docker & Portainer</span>
+            <span class="skill-pill bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-lg text-sm font-medium transition"><i class="fab fa-linux text-gray-800 mr-1"></i> Linux & Unraid</span>
+            <span class="skill-pill bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-lg text-sm font-medium transition">PCIe GPU Passthrough</span>
+            <span class="skill-pill bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-lg text-sm font-medium transition">Active Directory</span>
+            <span class="skill-pill bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-lg text-sm font-medium transition">Vendor & Partner Management</span>
+            <span class="skill-pill bg-indigo-50 text-indigo-700 px-3 py-1.5 rounded-lg text-sm font-medium transition">Technical Scoping & BA Intake</span>
+          </div>
         </div>
       </div>
     </div>
@@ -349,289 +436,275 @@
   <!-- Projects Section -->
   <section id="projects" class="py-16 bg-white">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold mb-12 text-center gradient-text">Projects</h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <h2 class="text-3xl font-bold mb-4 text-center gradient-text">Featured Projects & Initiatives</h2>
+      <p class="text-gray-600 text-center max-w-2xl mx-auto mb-8 text-sm md:text-base">Explore key highlights across enterprise e-commerce platforms, CI/CD pipeline automation, AI infrastructure, and full-stack software.</p>
+      
+      <!-- Project Category Filters -->
+      <div class="flex flex-wrap justify-center gap-2 mb-10">
+        <button class="filter-btn active px-4 py-2 rounded-lg text-sm font-semibold transition" data-filter="all">All Projects</button>
+        <button class="filter-btn bg-white hover:bg-gray-100 text-gray-700 px-4 py-2 rounded-lg text-sm font-medium border border-gray-200 transition" data-filter="enterprise">E-Commerce & SFCC</button>
+        <button class="filter-btn bg-white hover:bg-gray-100 text-gray-700 px-4 py-2 rounded-lg text-sm font-medium border border-gray-200 transition" data-filter="ai-systems">AI & Infrastructure</button>
+        <button class="filter-btn bg-white hover:bg-gray-100 text-gray-700 px-4 py-2 rounded-lg text-sm font-medium border border-gray-200 transition" data-filter="apps">Full Stack & Hardware</button>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
         
-        <!-- Project Card Uber UK-->
-        <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
-          <div class="h-48 bg-gradient-to-r from-indigo-100 to-purple-100 flex items-center justify-center">
-            <i class="fas fa-brands fa-uber text-6xl text-indigo-600"></i>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">UK Uber Direct Same Day Delivery Integration</h3>
-            <p class="text-gray-600 mb-4">Apr 2025 - Sep 2025</p>
-            <p class="text-gray-700 mb-4">Build-A-Bear Workshop - Led scoping and QA for Uber Direct integration for the UK
-              market, ensuring seamless functionality while accounting for regional differences with the US implementation. Acted as liaison between Uber, developers, and stakeholders.
-              Rolled out to 30 UK stores, enabling same day delivery for the first time in the region.</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">JavaScript</span>
-              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Quality Assurance</span>
-              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Postman API</span>
-              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">SFCC</span>
+        <!-- Project Card: Uber Direct US & UK -->
+        <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 border border-gray-100 flex flex-col justify-between" data-category="enterprise">
+          <div>
+            <div class="h-44 bg-gradient-to-r from-indigo-100 to-purple-100 flex items-center justify-center">
+              <i class="fas fa-brands fa-uber text-6xl text-indigo-600"></i>
             </div>
-          </div>
-        </div>
-        
-        <!-- Project Card Omnichannel-->
-        <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
-          <div class="h-48 bg-gradient-to-r from-indigo-100 to-purple-100 flex items-center justify-center">
-            <i class="fas fa-boxes text-6xl text-indigo-600"></i>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">Omnichannel Inventory for E-Commerce</h3>
-            <p class="text-gray-600 mb-4">May 2024 - Mar 2025</p>
-            <p class="text-gray-700 mb-4">Build-A-Bear Workshop - Collaborated with external development partner Brainstorm on testing, scoping and
-              development of a custom Omnichannel Inventory solution. Implemented integration with Deck Commerce OMS to
-              leverage backroom inventory across retail stores, significantly improving online availability.</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Postman API</span>
-              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Quality Assurance</span>
-              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">SFCC</span>
-              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">JSON</span>
-              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">XML</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project Card Uber US-->
-        <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
-          <div class="h-48 bg-gradient-to-r from-indigo-100 to-purple-100 flex items-center justify-center">
-            <i class="fas fa-brands fa-uber text-6xl text-indigo-600"></i>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">US Uber Direct Same Day Delivery Integration</h3>
-            <p class="text-gray-600 mb-4">Apr 2024 - Mar 2025</p>
-            <p class="text-gray-700 mb-4">Build-A-Bear Workshop - Led QA for Uber Direct integration into SFCC for US
-              market, ensuring seamless functionality. Acted as liaison between Uber, developers, and stakeholders.
-              Rolled out to 240+ US stores, exceeding previous provider's annual volume in first month.</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">JavaScript</span>
-              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Quality Assurance</span>
-              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Postman API</span>
-              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">SFCC</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project Card FedEx -->
-        <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
-          <div class="h-48 bg-gradient-to-r from-indigo-100 to-purple-100 flex items-center justify-center">
-            <i class="fa-brands fa-fedex text-6xl text-indigo-600"></i>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">Enhanced Delivery Estimates via FedEx API</h3>
-            <p class="text-gray-600 mb-4">Jul 2024 - Feb 2025</p>
-            <p class="text-gray-700 mb-4">Build-A-Bear Workshop - Contributed to implementing FedEx API to provide
-              accurate shipping estimates for U.S. customers at checkout. Acted as liaison between internal teams and
-              Brainstorm for implementation, bug fixes, and feature coordination.</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Postman API</span>
-              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Quality Assurance</span>
-              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">JSON</span>
-              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">SFCC</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project Card Royal Mail DPD -->
-        <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
-          <div class="h-48 bg-gradient-to-r from-indigo-100 to-purple-100 flex items-center justify-center">
-            <i class="fas fa-truck-fast text-6xl text-indigo-600"></i>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">Royal Mail to DPD Migration for UK Stores</h3>
-            <p class="text-gray-600 mb-4">May 2024 - Nov 2024</p>
-            <p class="text-gray-700 mb-4">Build-A-Bear Workshop - Led the IT side of the transition from Royal Mail to
-              DPD, coordinating with UK team, DPD, Deck Commerce, and ShipEngine to ensure seamless migration.</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Postman API</span>
-              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Quality Assurance</span>
-              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">SFCC</span>
-              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">JSON</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project Card Tikit-->
-        <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
-          <div class="h-48 bg-gradient-to-r from-indigo-100 to-purple-100 flex items-center justify-center">
-            <i class="fas fa-ticket-alt text-6xl text-indigo-600"></i>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">Tikit</h3>
-            <p class="text-gray-600 mb-4">Mar 2023 - May 2023</p>
-            <p class="text-gray-700 mb-4">An IT support ticketing web app created with JavaScript, Node.js, MongoDB,
-              Express.js, Handlebars, and Bootstrap.</p>
-            <a href="https://github.com/MAPReiff/Tikit"
-              class="text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center">
-              Learn More <i class="fas fa-arrow-right ml-2"></i>
-            </a>
-            <p>&nbsp;</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">JavaScript</span>
-              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Node.js</span>
-              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">MongoDB</span>
-              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Express.js</span>
-              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Handlebars</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project Card Psyche -->
-        <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
-          <div class="h-48 bg-gradient-to-r from-indigo-100 to-purple-100 flex items-center justify-center">
-            <i class="fas fa-brain text-6xl text-indigo-600"></i>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">Psyche</h3>
-            <p class="text-gray-600 mb-4">Sep 2022 - May 2023</p>
-            <p class="text-gray-700 mb-4">Developed a hardware and software solution to tackle the issue of inadequate
-              and imprecise identification of stress.</p>
-            <p class="text-green-600 font-medium mb-4">Winner of the 2023 David and GG Farber Societal Impact Award</p>
-            <a href="https://sites.google.com/view/psyche24/home"
-              class="text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center">
-              Learn More <i class="fas fa-arrow-right ml-2"></i>
-            </a>
-            <p>&nbsp;</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Processing</span>
-              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Java</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project Card Pedestrian System-->
-        <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
-          <div class="h-48 bg-gradient-to-r from-indigo-100 to-purple-100 flex items-center justify-center">
-            <i class="fas fa-walking text-6xl text-indigo-600"></i>
-            <!-- <i><img src="/images/opencv_demo1.png" alt="Gif showcasing the Autonomous Robot project."/> </i> -->
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">Pedestrian System</h3>
-            <p class="text-gray-600 mb-4">Feb 2022 - May 2022</p>
-            <p class="text-gray-700 mb-4">Developed a program that can detect the presence of people in a crosswalk to
-              determine if it is safe to change traffic signals using C++ and the OpenCV library.</p>
-            <a href="https://github.com/MAPReiff/CPE462-PedestrianSystem-2022S"
-              class="text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center">
-              Learn More <i class="fas fa-arrow-right ml-2"></i>
-            </a>
-            <p>&nbsp;</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">C++</span>
-              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">OpenCV</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project Card GPT-3 -->
-        <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
-          <div class="h-48 bg-gradient-to-r from-indigo-100 to-purple-100 flex items-center justify-center">
-            <i class="fas fa-robot text-6xl text-indigo-600"></i>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">GPT-3 Chatbot</h3>
-            <p class="text-gray-600 mb-4">Jun 2021 - Oct 2021</p>
-            <p class="text-gray-700 mb-4">Developed a chatbot using OpenAI's GPT-3 model APIs to converse with users on
-              Discord with memory system for chat history.</p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">JavaScript</span>
-                <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Node.js</span>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-bold text-gray-900">Uber Direct Same-Day Delivery (US & UK)</h3>
               </div>
+              <p class="text-xs font-semibold text-indigo-600 uppercase tracking-wider mb-3">Build-A-Bear Workshop · 2024 – 2026</p>
+              <p class="text-gray-700 text-sm mb-4 leading-relaxed">
+                Ran initial API research and scoping, then led integration and end-to-end testing with Deck Commerce, Brainstorm, and Uber through the Dallas pilot and nationwide go-live across 250+ retail stores. Delivered 6,115 orders ($52,774) in month one, exceeding the previous vendor's annual volume. Scoped and supported the UK rollout with lat/long addressing and regional delivery instructions.
+              </p>
+            </div>
           </div>
-        </div>
-
-        <!-- Project Card GPT-2 -->
-        <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
-          <div class="h-48 bg-gradient-to-r from-indigo-100 to-purple-100 flex items-center justify-center">
-            <i class="fas fa-robot text-6xl text-indigo-600"></i>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">GPT-2 Chatbot</h3>
-            <p class="text-gray-600 mb-4">May 2021 - Jul 2021</p>
-            <p class="text-gray-700 mb-4">Developed a chatbot using a custom-trained implementation of OpenAI's GPT-2
-              model based on friends' chat history.</p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Python</span>
-                <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Google Cloud</span>
-              </div>
-          </div>
-        </div>
-
-        <!-- Project Card Weather Station-->
-        <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
-          <div class="h-48 bg-gradient-to-r from-indigo-100 to-purple-100 flex items-center justify-center">
-            <i class="fas fa-cloud-sun text-6xl text-indigo-600"></i>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">Weather Station</h3>
-            <p class="text-gray-600 mb-4">Jan 2020 - May 2020</p>
-            <p class="text-gray-700 mb-4">Designed and programmed an Arduino-based IoT weather station using sensors to
-              collect weather data and upload it to an external server.</p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">LabVIEW</span>
-                <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Arduino</span>
-                <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">C++</span>
-              </div>
-          </div>
-        </div>
-
-        <!-- Project Card Autonomous Robot-->
-        <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
-          <div class="h-48 bg-gradient-to-r from-indigo-100 to-purple-100 flex items-center justify-center">
-            <!-- <i class="fas fa-robot text-6xl text-indigo-600"></i> -->
-            <i><img src="/images/e121-robot.gif" alt="Gif showcasing the Autonomous Robot project."/> </i>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">Autonomous Robot</h3>
-            <p class="text-gray-600 mb-4">Sep 2019 - Dec 2019</p>
-            <p class="text-gray-700 mb-4">Designed and programmed an Arduino-based mobile robot to complete a series of objectives without human intervention.</p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Arduino</span>
-                <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">C++</span>
-              </div>
-          </div>
-        </div>
-
-         <!-- Project Card Zamasu-->
-         <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
-          <div class="h-48 bg-gradient-to-r from-indigo-100 to-purple-100 flex items-center justify-center">
-            <i class="fas fa-robot text-6xl text-indigo-600"></i>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">Zamasu</h3>
-            <p class="text-gray-600 mb-4">Feb 2018 - May 2018</p>
-            <p class="text-gray-700 mb-4">Developed a Discord bot strictly designed around community moderation, that was utilized by over 500 communities.</p>
-            <a href="https://github.com/MAPReiff/Zamasu"
-              class="text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center">
-              Learn More <i class="fas fa-arrow-right ml-2"></i>
-            </a>
-            <p>&nbsp;</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">JavaScript</span>
-              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Node.js</span>
-              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">RethinkDB</span>
+          <div class="px-6 pb-6 pt-0">
+            <div class="flex flex-wrap gap-1.5">
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2.5 py-1 rounded-md font-medium">SFCC SFRA</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2.5 py-1 rounded-md font-medium">Uber Direct API</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2.5 py-1 rounded-md font-medium">Deck OMS</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2.5 py-1 rounded-md font-medium">Postman</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2.5 py-1 rounded-md font-medium">QA & Release</span>
             </div>
           </div>
         </div>
 
-        <!-- Project Card M8-->
-        <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
-          <div class="h-48 bg-gradient-to-r from-indigo-100 to-purple-100 flex items-center justify-center">
-            <i class="fas fa-robot text-6xl text-indigo-600"></i>
+        <!-- Project Card: Bitbucket CI/CD Pipeline Optimization -->
+        <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 border border-gray-100 flex flex-col justify-between" data-category="enterprise">
+          <div>
+            <div class="h-44 bg-gradient-to-r from-blue-100 to-indigo-100 flex items-center justify-center">
+              <i class="fas fa-bolt text-6xl text-indigo-600"></i>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-bold text-gray-900">Bitbucket CI/CD Pipeline Optimization</h3>
+              </div>
+              <p class="text-xs font-semibold text-indigo-600 uppercase tracking-wider mb-3">Build-A-Bear Workshop · 2025</p>
+              <p class="text-gray-700 text-sm mb-4 leading-relaxed">
+                Architected and implemented an infrastructure caching solution for Dev and Prod/Staging build and deployment pipelines in Bitbucket. Reduced pipeline execution runtime from ~19 minutes to ~9 minutes (a 53% reduction / 2.1× speedup), saving ~10 minutes per build and drastically accelerating release cycles and emergency hotfixes.
+              </p>
+            </div>
           </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold mb-2">M8 Bot</h3>
-            <p class="text-gray-600 mb-4">Jan 2017 - Jun 2019</p>
-            <p class="text-gray-700 mb-4">Developed and programmed M8 Bot using Node JS, a chatbot made for the Discord chat platform, that was utilized by over 4,600 communities.</p>
-            <a href="https://github.com/MAPReiff/M8-Bot"
-              class="text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center">
-              Learn More <i class="fas fa-arrow-right ml-2"></i>
-            </a>
-            <p>&nbsp;</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">JavaScript</span>
-              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Node.js</span>
-              <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">RethinkDB</span>
+          <div class="px-6 pb-6 pt-0">
+            <div class="flex flex-wrap gap-1.5">
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2.5 py-1 rounded-md font-medium">Bitbucket Pipelines</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2.5 py-1 rounded-md font-medium">CI/CD</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2.5 py-1 rounded-md font-medium">Build Caching</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2.5 py-1 rounded-md font-medium">DevOps</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card: Omnichannel Inventory (OCI) & Shipping Modernization -->
+        <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 border border-gray-100 flex flex-col justify-between" data-category="enterprise">
+          <div>
+            <div class="h-44 bg-gradient-to-r from-purple-100 to-indigo-100 flex items-center justify-center">
+              <i class="fas fa-boxes-stacked text-6xl text-indigo-600"></i>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-bold text-gray-900">Omnichannel Inventory & Shipping Modernization</h3>
+              </div>
+              <p class="text-xs font-semibold text-indigo-600 uppercase tracking-wider mb-3">Build-A-Bear Workshop · 2024 – 2026</p>
+              <p class="text-gray-700 text-sm mb-4 leading-relaxed">
+                Scoped and tested custom Omnichannel Inventory with Deck Commerce OMS and Brainstorm to leverage real-time store inventory for online orders (BOSFS). Led the UK carrier migration from Royal Mail to DPD (including Northern Ireland compliance), and integrated FedEx API for accurate checkout delivery estimates.
+              </p>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-0">
+            <div class="flex flex-wrap gap-1.5">
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2.5 py-1 rounded-md font-medium">Omnichannel (OCI)</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2.5 py-1 rounded-md font-medium">Deck OMS</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2.5 py-1 rounded-md font-medium">FedEx API</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2.5 py-1 rounded-md font-medium">DPD / ShipEngine</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card: Structured Schema for AI Search & AEO -->
+        <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 border border-gray-100 flex flex-col justify-between" data-category="enterprise ai-systems">
+          <div>
+            <div class="h-44 bg-gradient-to-r from-indigo-100 to-blue-100 flex items-center justify-center">
+              <i class="fas fa-network-wired text-6xl text-indigo-600"></i>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-bold text-gray-900">Structured Schema for AI & Local Search</h3>
+              </div>
+              <p class="text-xs font-semibold text-indigo-600 uppercase tracking-wider mb-3">Build-A-Bear Workshop · 2024 – 2025</p>
+              <p class="text-gray-700 text-sm mb-4 leading-relaxed">
+                Engineered robust JSON-LD Product schema across SFRA Product Detail Pages detailing real-time variant pricing, availability, and dynamic Bazaarvoice review ratings. Upgraded store landing pages with ToyStore, Event, and HowTo structured schemas to optimize for next-generation AI query engines and local search.
+              </p>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-0">
+            <div class="flex flex-wrap gap-1.5">
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2.5 py-1 rounded-md font-medium">SFRA</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2.5 py-1 rounded-md font-medium">JSON-LD</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2.5 py-1 rounded-md font-medium">AEO & SEO</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2.5 py-1 rounded-md font-medium">JavaScript</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2.5 py-1 rounded-md font-medium">Bazaarvoice</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card: Self-Hosted AI & Infrastructure -->
+        <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 border border-gray-100 flex flex-col justify-between" data-category="ai-systems">
+          <div>
+            <div class="h-44 bg-gradient-to-r from-purple-100 to-pink-100 flex items-center justify-center">
+              <i class="fas fa-server text-6xl text-indigo-600"></i>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-bold text-gray-900">Self-Hosted AI & Virtualization Lab</h3>
+              </div>
+              <p class="text-xs font-semibold text-indigo-600 uppercase tracking-wider mb-3">Personal Project · Ongoing</p>
+              <p class="text-gray-700 text-sm mb-4 leading-relaxed">
+                Architected a high-performance Unraid virtualization server with IOMMU group isolation and PCIe GPU passthrough for bare-metal compute performance. Self-hosting state-of-the-art open source LLMs (DeepSeek, Qwen, Llama, Gemma) orchestrated via Docker, Portainer, Ollama, and llama.cpp.
+              </p>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-0">
+            <div class="flex flex-wrap gap-1.5">
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2.5 py-1 rounded-md font-medium">Local LLMs</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2.5 py-1 rounded-md font-medium">Docker / Portainer</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2.5 py-1 rounded-md font-medium">Unraid</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2.5 py-1 rounded-md font-medium">GPU Passthrough</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card: Psyche -->
+        <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 border border-gray-100 flex flex-col justify-between" data-category="ai-systems apps">
+          <div>
+            <div class="h-44 bg-gradient-to-r from-indigo-100 to-purple-100 flex items-center justify-center">
+              <i class="fas fa-brain text-6xl text-indigo-600"></i>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-bold text-gray-900">Psyche: The Stress Evaluator</h3>
+              </div>
+              <p class="text-xs font-semibold text-indigo-600 uppercase tracking-wider mb-2">Stevens Senior Design · 2022 – 2023</p>
+              <p class="text-emerald-700 text-xs font-semibold mb-3 flex items-center">
+                <i class="fas fa-award mr-1.5 text-amber-500 text-sm"></i> Winner: David & GG Farber Societal Impact Award
+              </p>
+              <p class="text-gray-700 text-sm mb-4 leading-relaxed">
+                Developed an integrated hardware and software solution using OpenBCI Ultracortex Mark IV EEG hardware to correlate real-time brainwave activity to quantized stress levels for objective identification.
+              </p>
+              <a href="https://sites.google.com/view/psyche24/home" target="_blank" rel="noopener noreferrer"
+                class="text-indigo-600 hover:text-indigo-800 font-medium text-sm inline-flex items-center">
+                Project Website <i class="fas fa-arrow-up-right-from-square ml-1.5 text-xs"></i>
+              </a>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-0">
+            <div class="flex flex-wrap gap-1.5">
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2.5 py-1 rounded-md font-medium">OpenBCI (EEG)</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2.5 py-1 rounded-md font-medium">Java</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2.5 py-1 rounded-md font-medium">Processing</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2.5 py-1 rounded-md font-medium">Hardware IoT</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card: Tikit -->
+        <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 border border-gray-100 flex flex-col justify-between" data-category="apps">
+          <div>
+            <div class="h-44 bg-gradient-to-r from-blue-100 to-indigo-100 flex items-center justify-center">
+              <i class="fas fa-ticket text-6xl text-indigo-600"></i>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-bold text-gray-900">Tikit - IT Support Ticketing</h3>
+              </div>
+              <p class="text-xs font-semibold text-indigo-600 uppercase tracking-wider mb-3">Full Stack Web App · 2023</p>
+              <p class="text-gray-700 text-sm mb-4 leading-relaxed">
+                Engineered a comprehensive IT support ticketing web application featuring ticket lifecycle management, user authentication, department assignment routing, and dynamic dashboards.
+              </p>
+              <a href="https://github.com/MAPReiff/Tikit" target="_blank" rel="noopener noreferrer"
+                class="text-indigo-600 hover:text-indigo-800 font-medium text-sm inline-flex items-center">
+                GitHub Repository <i class="fab fa-github ml-1.5"></i>
+              </a>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-0">
+            <div class="flex flex-wrap gap-1.5">
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2.5 py-1 rounded-md font-medium">Node.js</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2.5 py-1 rounded-md font-medium">Express.js</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2.5 py-1 rounded-md font-medium">MongoDB</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2.5 py-1 rounded-md font-medium">Handlebars</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card: Pedestrian Crosswalk System -->
+        <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 border border-gray-100 flex flex-col justify-between" data-category="apps">
+          <div>
+            <div class="h-44 bg-gradient-to-r from-indigo-100 to-purple-100 flex items-center justify-center">
+              <i class="fas fa-person-walking text-6xl text-indigo-600"></i>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-bold text-gray-900">Pedestrian Crosswalk Safety System</h3>
+              </div>
+              <p class="text-xs font-semibold text-indigo-600 uppercase tracking-wider mb-3">Stevens Institute · 2022</p>
+              <p class="text-gray-700 text-sm mb-4 leading-relaxed">
+                Developed a real-time computer vision program in C++ with the OpenCV library that detects pedestrians inside crosswalks and determines safe timing triggers for traffic signaling.
+              </p>
+              <a href="https://github.com/MAPReiff/CPE462-PedestrianSystem-2022S" target="_blank" rel="noopener noreferrer"
+                class="text-indigo-600 hover:text-indigo-800 font-medium text-sm inline-flex items-center">
+                GitHub Repository <i class="fab fa-github ml-1.5"></i>
+              </a>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-0">
+            <div class="flex flex-wrap gap-1.5">
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2.5 py-1 rounded-md font-medium">C++</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2.5 py-1 rounded-md font-medium">OpenCV</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2.5 py-1 rounded-md font-medium">Computer Vision</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card: Discord Bots & GPT Systems -->
+        <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 border border-gray-100 flex flex-col justify-between" data-category="ai-systems apps">
+          <div>
+            <div class="h-44 bg-gradient-to-r from-purple-100 to-indigo-100 flex items-center justify-center">
+              <i class="fas fa-robot text-6xl text-indigo-600"></i>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-bold text-gray-900">Discord Community Bots & GPT AI</h3>
+              </div>
+              <p class="text-xs font-semibold text-indigo-600 uppercase tracking-wider mb-3">Node.js / Python · 2017 – 2021</p>
+              <p class="text-gray-700 text-sm mb-4 leading-relaxed">
+                Engineered high-scale Discord bots (M8 Bot, Zamasu) deployed across 5,000+ communities with RethinkDB backend, plus custom conversational AI bots leveraging fine-tuned GPT-2 and GPT-3 APIs with contextual history memory.
+              </p>
+              <div class="flex space-x-4">
+                <a href="https://github.com/MAPReiff/M8-Bot" target="_blank" rel="noopener noreferrer"
+                  class="text-indigo-600 hover:text-indigo-800 font-medium text-sm inline-flex items-center">
+                  M8 Bot <i class="fab fa-github ml-1"></i>
+                </a>
+                <a href="https://github.com/MAPReiff/Zamasu" target="_blank" rel="noopener noreferrer"
+                  class="text-indigo-600 hover:text-indigo-800 font-medium text-sm inline-flex items-center">
+                  Zamasu <i class="fab fa-github ml-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-0">
+            <div class="flex flex-wrap gap-1.5">
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2.5 py-1 rounded-md font-medium">JavaScript / Node.js</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2.5 py-1 rounded-md font-medium">Python</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2.5 py-1 rounded-md font-medium">GPT APIs</span>
+              <span class="bg-indigo-100 text-indigo-800 text-xs px-2.5 py-1 rounded-md font-medium">RethinkDB</span>
             </div>
           </div>
         </div>
@@ -680,7 +753,7 @@
       <div class="flex flex-col md:flex-row justify-between items-center">
         <div class="mb-4 md:mb-0">
           <a href="#" class="text-xl font-bold gradient-text">Mitchell Reiff</a>
-          <p class="text-gray-400 mt-2">Computer Engineer & Web Developer</p>
+          <p class="text-gray-400 mt-2">Salesforce Commerce Cloud · Development, Quality & Delivery</p>
         </div>
         <div class="flex space-x-6">
           <a href="https://github.com/MAPReiff/" class="text-gray-400 hover:text-white transition">
@@ -692,7 +765,7 @@
         </div>
       </div>
       <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-        <p>&copy; 2023 Mitchell Reiff. All rights reserved.</p>
+        <p>&copy; 2026 Mitchell Reiff. All rights reserved.</p>
       </div>
     </div>
   </footer>
@@ -721,6 +794,32 @@
           const menu = document.getElementById('menu');
           menu.classList.add('hidden');
         }
+      });
+    });
+
+    // Project filtering
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('#projects-grid .project-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', function () {
+        filterBtns.forEach(b => {
+          b.classList.remove('active', 'bg-indigo-600', 'text-white');
+          b.classList.add('bg-white', 'text-gray-700', 'border-gray-200');
+        });
+        this.classList.add('active');
+        this.classList.remove('bg-white', 'text-gray-700', 'border-gray-200');
+
+        const filter = this.getAttribute('data-filter');
+
+        projectCards.forEach(card => {
+          const category = card.getAttribute('data-category') || '';
+          if (filter === 'all' || category.includes(filter)) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
       });
     });
   </script>
